@@ -1,8 +1,10 @@
+'use client';
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Logo from "/pragathi-logo-1.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,37 +22,34 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border shadow-sm">
+    <nav className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-full flex items-center justify-center transition-all">
-              <img
-                src={Logo}
-                alt="Logo"
-                width={600}
-                height={200}
-                className="w-auto h-auto"
-              ></img>
+        <div className="flex h-20 items-center justify-between">
+          <Link href="/" className="group flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full transition-all">
+              <Image
+                src="/pragathi-logo-1.jpg"
+                alt="Pragathi Co-operative Society logo"
+                width={48}
+                height={48}
+                className="h-auto w-auto"
+                priority
+              />
             </div>
             <div className="hidden md:block">
-              <div className="font-bold text-xl text-primary">
+              <div className="text-xl font-bold text-primary">
                 Pragathi Co-operative Society
               </div>
-              <div className="text-xs text-muted-foreground">
-                Trust - Invest - Prosper
-              </div>
+              <div className="text-xs text-muted-foreground">Trust - Invest - Prosper</div>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
-              <Link key={link.path} to={link.path}>
+              <Link key={link.path} href={link.path}>
                 <Button
                   variant="ghost"
-                  className="text-foreground hover:text-primary hover:bg-secondary/50 transition-all"
+                  className="transition-all text-foreground hover:bg-secondary/50 hover:text-primary"
                 >
                   {link.name}
                 </Button>
@@ -58,26 +57,24 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            className="rounded-lg p-2 transition-colors hover:bg-secondary lg:hidden"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-in">
+          <div className="animate-fade-in border-t border-border py-4 lg:hidden">
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   onClick={() => setIsOpen(false)}
-                  className="px-4 py-3 rounded-lg hover:bg-secondary transition-colors text-foreground"
+                  className="rounded-lg px-4 py-3 text-foreground transition-colors hover:bg-secondary"
                 >
                   {link.name}
                 </Link>

@@ -1,64 +1,64 @@
+import Image from "next/image";
+import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
-import Logo from "/pragathi-logo-1.jpg";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <img
-                src={Logo}
-                alt="Logo"
-                width={8}
-                height={8}
-                className="w-8 h-8"
-              ></img>{" "}
-              <div className="font-bold text-lg">
+            <div className="mb-4 flex items-center gap-2">
+              <Image
+                src="/pragathi-logo-1.jpg"
+                alt="Pragathi logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+              <div className="text-lg font-bold">
                 Pragathi Co-operative Society
               </div>
             </div>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-primary-foreground/80">
               Serving the community since years, empowering lives through
               trusted financial services and support.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/history"
-                  className="hover:text-accent transition-colors"
+                  href="/history"
+                  className="transition-colors hover:text-accent"
                 >
                   Our History
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/directors"
-                  className="hover:text-accent transition-colors"
+                  href="/directors"
+                  className="transition-colors hover:text-accent"
                 >
                   Board of Directors
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/branches"
-                  className="hover:text-accent transition-colors"
+                  href="/branches"
+                  className="transition-colors hover:text-accent"
                 >
                   Branches
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/careers"
-                  className="hover:text-accent transition-colors"
+                  href="/careers"
+                  className="transition-colors hover:text-accent"
                 >
                   Careers
                 </Link>
@@ -66,38 +66,37 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Our Services</h3>
+            <h3 className="mb-4 text-lg font-semibold">Our Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  to="/facilities"
-                  className="hover:text-accent transition-colors"
+                  href="/facilities"
+                  className="transition-colors hover:text-accent"
                 >
                   Savings Bank
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/facilities"
-                  className="hover:text-accent transition-colors"
+                  href="/facilities"
+                  className="transition-colors hover:text-accent"
                 >
                   Fixed Deposits
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/loans"
-                  className="hover:text-accent transition-colors"
+                  href="/loans"
+                  className="transition-colors hover:text-accent"
                 >
                   Property Loans
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/loans"
-                  className="hover:text-accent transition-colors"
+                  href="/loans"
+                  className="transition-colors hover:text-accent"
                 >
                   Vehicle & Gold Loans
                 </Link>
@@ -105,30 +104,29 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Head Office</h3>
+            <h3 className="mb-4 text-lg font-semibold">Head Office</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <MapPin className="mt-1 h-4 w-4 flex-shrink-0" />
                 <span>Kulshekar, Mangalore</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 flex-shrink-0" />
+                <Phone className="h-4 w-4 flex-shrink-0" />
                 <span>+91 824 XXXXXXX</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 flex-shrink-0" />
+                <Mail className="h-4 w-4 flex-shrink-0" />
                 <span>info@pragathicoop.com</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
+        <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/60">
           <p>
-            &copy; {new Date().getFullYear()} Pragathi Co-operative Society Ltd.
-            All rights reserved.
+            &copy; {currentYear} Pragathi Co-operative Society Ltd. All rights
+            reserved.
           </p>
         </div>
       </div>

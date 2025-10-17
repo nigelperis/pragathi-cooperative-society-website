@@ -1,37 +1,36 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   ArrowRight,
   Users,
   Building2,
   Heart,
   TrendingUp,
+  PiggyBank,
+  CreditCard,
+  Vault,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-community.jpg";
-import savingsIcon from "@/assets/savings-icon.png";
-import depositIcon from "@/assets/deposit-icon.png";
-import loanIcon from "@/assets/loan-icon.png";
 
 const HomePage = () => {
   const services = [
     {
-      icon: savingsIcon,
+      icon: PiggyBank,
       title: "Savings & Deposits",
       description:
         "Secure your future with our trusted savings accounts and fixed deposit schemes.",
       link: "/facilities",
     },
     {
-      icon: loanIcon,
+      icon: CreditCard,
       title: "Loan Services",
       description:
         "Property, vehicle, and gold loans with transparent terms and competitive rates.",
       link: "/loans",
     },
     {
-      icon: depositIcon,
+      icon: Vault,
       title: "Special Schemes",
       description:
         "Pigmy deposits and recurring schemes designed for your convenience.",
@@ -56,10 +55,10 @@ const HomePage = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
         </div>
 
-        <div className="container relative z-10 mx-auto px-4">
+        <div className="container relative z-10 mx-auto max-w-7xl px-4">
           <div className="max-w-2xl animate-fade-in text-primary-foreground">
             <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-              Serving Communities,
+              Trust. Invest. Prosper,
               <br />
               <span className="text-accent">Empowering Lives</span>
             </h1>
@@ -71,7 +70,7 @@ const HomePage = () => {
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="bg-accent font-semibold text-accent-foreground shadow-lg transition-all hover:bg-accent/90 hover:shadow-xl"
+                  className="bg-accent font-semibold text-accent-foreground shadow-lg transition-all hover:bg-accent/90 hover:shadow-xl cursor-pointer"
                 >
                   Get Started
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -81,7 +80,7 @@ const HomePage = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20"
+                  className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20 cursor-pointer"
                 >
                   Our Story
                 </Button>
@@ -92,7 +91,7 @@ const HomePage = () => {
       </section>
 
       <section className="bg-secondary/30 py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-7xl px-4">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((stat, index) => (
               <div
@@ -114,7 +113,7 @@ const HomePage = () => {
       </section>
 
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-7xl px-4">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-bold text-primary">Our Services</h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
@@ -130,14 +129,8 @@ const HomePage = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <CardContent className="p-8 text-center">
-                  <div className="mb-6 inline-block">
-                    <Image
-                      src={service.icon}
-                      alt={service.title}
-                      width={80}
-                      height={80}
-                      className="mx-auto h-20 w-20 transition-transform duration-300 group-hover:scale-110"
-                    />
+                  <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 mx-auto transition-transform duration-300 group-hover:scale-110">
+                    <service.icon className="h-10 w-10 text-primary" />
                   </div>
                   <h3 className="mb-4 text-2xl font-semibold text-primary">
                     {service.title}
@@ -148,7 +141,7 @@ const HomePage = () => {
                   <Link href={service.link}>
                     <Button
                       variant="ghost"
-                      className="group text-primary hover:bg-secondary/50 hover:text-accent"
+                      className="group text-primary hover:bg-secondary/50 hover:text-accent cursor-pointer"
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -162,7 +155,7 @@ const HomePage = () => {
       </section>
 
       <section className="bg-gradient-to-br from-primary to-primary/90 py-20 text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto max-w-7xl px-4 text-center">
           <h2 className="mb-6 text-4xl font-bold">Join Our Growing Family</h2>
           <p className="mx-auto mb-8 max-w-2xl text-xl text-primary-foreground/90">
             Experience the warmth of community banking. Let us help you achieve
@@ -171,7 +164,7 @@ const HomePage = () => {
           <Link href="/contact">
             <Button
               size="lg"
-              className="bg-accent font-semibold text-accent-foreground shadow-lg hover:bg-accent/90"
+              className="bg-accent font-semibold text-accent-foreground shadow-lg hover:bg-accent/90 cursor-pointer"
             >
               Contact Us Today
               <ArrowRight className="ml-2 h-5 w-5" />

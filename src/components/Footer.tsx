@@ -7,16 +7,16 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto max-w-7xl px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="mb-4 flex items-center gap-2">
               <Image
-                src="/pragathi-logo-1.jpg"
+                src="/Pragathi-LOGO.png"
                 alt="Pragathi logo"
-                width={32}
-                height={32}
-                className="h-8 w-8"
+                width={60}
+                height={60}
+                className="h-16 w-16"
               />
               <div className="text-lg font-bold">
                 Pragathi Co-operative Society

@@ -52,7 +52,7 @@ const BranchesPage = () => {
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
           <h1 className="mb-4 text-5xl font-bold text-primary">Our Branches</h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
@@ -61,7 +61,7 @@ const BranchesPage = () => {
           </p>
         </div>
 
-        <div className="mx-auto mb-16 mt-16 max-w-5xl animate-fade-in">
+        <div className="mx-auto mb-16 mt-16 max-w-7xl animate-fade-in">
           <div className="overflow-hidden rounded-2xl shadow-xl">
             <Image
               src={branchPhoto}
@@ -112,7 +112,7 @@ const BranchesPage = () => {
                 </div>
 
                 <div className="mt-4 border-t border-border pt-4">
-                  <button className="text-sm font-medium text-primary transition-colors hover:text-accent">
+                  <button className="text-sm font-medium text-primary transition-colors hover:text-accent cursor-pointer">
                     View on Map &rarr;
                   </button>
                 </div>
@@ -121,7 +121,7 @@ const BranchesPage = () => {
           ))}
         </div>
 
-        <div className="mx-auto mt-16 max-w-4xl">
+        <div className="mx-auto mt-16 max-w-7xl">
           <Card className="border-primary/20 bg-primary/5">
             <CardContent className="p-8 text-center">
               <h2 className="mb-4 text-2xl font-bold text-primary">

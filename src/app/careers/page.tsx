@@ -57,11 +57,8 @@ const CareersPage = () => {
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
-          <div className="mx-auto mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
-            <Briefcase className="h-10 w-10 text-primary" />
-          </div>
           <h1 className="mb-4 text-5xl font-bold text-primary">Join Our Team</h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
             Build a meaningful career while making a positive impact in your
@@ -73,7 +70,7 @@ const CareersPage = () => {
           <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Why Join Pragathi?
           </h2>
-          <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
+          <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
             {benefits.map((benefit, index) => (
               <Card
                 key={benefit.title}
@@ -96,7 +93,7 @@ const CareersPage = () => {
           </div>
         </div>
 
-        <div className="mx-auto mb-16 max-w-4xl">
+        <div className="mx-auto mb-16 max-w-7xl">
           <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Current Openings
           </h2>
@@ -132,7 +129,7 @@ const CareersPage = () => {
                       </div>
                     </div>
                     <Link href="/contact">
-                      <Button className="whitespace-nowrap bg-primary hover:bg-primary/90">
+                      <Button className="whitespace-nowrap bg-primary hover:bg-primary/90 cursor-pointer">
                         Apply Now
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
@@ -154,7 +151,7 @@ const CareersPage = () => {
                 future opportunities.
               </p>
               <Link href="/contact">
-                <Button className="bg-accent font-semibold text-accent-foreground hover:bg-accent/90" size="lg">
+                <Button className="bg-accent font-semibold text-accent-foreground hover:bg-accent/90 cursor-pointer" size="lg">
                   Send Your Resume
                 </Button>
               </Link>
@@ -162,7 +159,7 @@ const CareersPage = () => {
           </Card>
         </div>
 
-        <div className="mx-auto mt-16 max-w-4xl">
+        <div className="mx-auto mt-16 max-w-7xl">
           <Card className="border-2 border-primary/20 bg-gradient-to-br from-accent/5 to-primary/5">
             <CardContent className="p-8">
               <h3 className="mb-6 text-center text-2xl font-bold text-primary">

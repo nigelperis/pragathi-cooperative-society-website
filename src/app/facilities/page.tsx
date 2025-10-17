@@ -110,7 +110,7 @@ const FacilitiesPage = () => {
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
           <h1 className="mb-4 text-5xl font-bold text-primary">
             Our Facilities &amp; Schemes
@@ -157,7 +157,7 @@ const FacilitiesPage = () => {
           ))}
         </div>
 
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-7xl">
           <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
             <CardContent className="p-8 md:p-12">
               <h2 className="mb-8 text-center text-3xl font-bold text-primary">

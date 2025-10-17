@@ -60,7 +60,7 @@ const LoansPage = () => {
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-16 text-center animate-fade-in">
           <h1 className="mb-4 text-5xl font-bold text-primary">Loan Services</h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
@@ -101,7 +101,7 @@ const LoansPage = () => {
                 </div>
 
                 <Link href="/contact">
-                  <Button className="w-full bg-primary hover:bg-primary/90">
+                  <Button className="w-full bg-primary hover:bg-primary/90 cursor-pointer">
                     Apply Now
                   </Button>
                 </Link>
@@ -110,7 +110,7 @@ const LoansPage = () => {
           ))}
         </div>
 
-        <div className="mx-auto mb-16 max-w-5xl">
+        <div className="mx-auto mb-16 max-w-7xl">
           <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
             <CardContent className="p-8 md:p-12">
               <h2 className="mb-8 text-center text-3xl font-bold text-primary">
@@ -149,7 +149,7 @@ const LoansPage = () => {
                 lender—we&apos;re your financial partner in the community.
               </p>
               <Link href="/contact">
-                <Button className="bg-accent text-accent-foreground hover:bg-accent/90" size="lg">
+                <Button className="bg-accent text-accent-foreground hover:bg-accent/90 cursor-pointer" size="lg">
                   Get in Touch
                 </Button>
               </Link>

@@ -128,5 +128,16 @@
 
   body {
     @apply bg-background text-foreground;
+
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  nav {
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 }

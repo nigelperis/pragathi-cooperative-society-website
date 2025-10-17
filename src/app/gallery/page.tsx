@@ -19,11 +19,8 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
-          <div className="mx-auto mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
-            <Camera className="h-10 w-10 text-primary" />
-          </div>
           <h1 className="mb-4 text-5xl font-bold text-primary">Photo Gallery</h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
             Capturing moments of service, growth, and community connection

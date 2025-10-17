@@ -58,7 +58,7 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-16 text-center animate-fade-in">
           <h1 className="mb-4 text-5xl font-bold text-primary">Get in Touch</h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
@@ -143,7 +143,7 @@ const ContactPage = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-primary hover:bg-primary/90"
+                  className="w-full bg-primary hover:bg-primary/90 cursor-pointer"
                 >
                   Send Message
                   <Send className="ml-2 h-5 w-5" />

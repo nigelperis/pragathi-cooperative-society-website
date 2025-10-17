@@ -1,43 +1,26 @@
 import { Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 const DirectorsPage = () => {
   const directors = [
     {
-      name: "Shri Rajesh Kumar",
-      position: "President",
-      message:
-        "Leading with dedication to serve our community and uphold the cooperative spirit that defines us.",
-    },
-    {
-      name: "Smt. Lakshmi Bai",
+      name: "MR. ROBERT LANCY PAIS",
       position: "Vice President",
-      message:
-        "Committed to ensuring transparent and member-focused financial services for all.",
+      mobile: "9845184284",
+      image: "/Board of Directors/IMG_2208.JPG",
     },
     {
-      name: "Shri Mohan Das",
-      position: "Secretary",
-      message:
-        "Working tirelessly to maintain the highest standards of governance and service.",
-    },
-    {
-      name: "Shri Suresh Nayak",
-      position: "Treasurer",
-      message:
-        "Safeguarding the financial integrity and growth of our cooperative society.",
-    },
-    {
-      name: "Smt. Prema Shetty",
+      name: "MR. ROMANS BASIL LOBO",
       position: "Director",
-      message:
-        "Dedicated to empowering women and promoting financial inclusion.",
+      mobile: "9448300593",
+      image: "/Board of Directors/IMG_2206.JPG",
     },
     {
-      name: "Shri Vinod Rao",
+      name: "MR. JOCKIEM STANY ALVARES",
       position: "Director",
-      message:
-        "Bringing business acumen and community focus to our board.",
+      mobile: "9845044983",
+      image: "/Board of Directors/IMG_2207.jpg",
     },
   ];
 
@@ -52,8 +35,8 @@ const DirectorsPage = () => {
             Board of Directors
           </h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-            Meet the dedicated leaders guiding our cooperative towards excellence
-            and community service
+            Meet the dedicated leaders guiding our cooperative towards
+            excellence and community service
           </p>
         </div>
 
@@ -64,12 +47,13 @@ const DirectorsPage = () => {
                 A Message from Our Leadership
               </h2>
               <p className="text-lg leading-relaxed text-foreground">
-                At Pragathi Co-operative Society, we believe that true success is
-                measured not in numbers alone, but in the lives we touch and the
-                dreams we help fulfill. Our board is committed to upholding the
-                highest standards of transparency, integrity, and service.
-                Together, we work to ensure that every member of our community has
-                access to fair, reliable, and compassionate financial support.
+                At Pragathi Co-operative Society, we believe that true success
+                is measured not in numbers alone, but in the lives we touch and
+                the dreams we help fulfill. Our board is committed to upholding
+                the highest standards of transparency, integrity, and service.
+                Together, we work to ensure that every member of our community
+                has access to fair, reliable, and compassionate financial
+                support.
               </p>
             </CardContent>
           </Card>
@@ -83,8 +67,14 @@ const DirectorsPage = () => {
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <CardContent className="p-8 text-center">
-                <div className="mx-auto mb-6 flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-accent/20 transition-transform group-hover:scale-105">
-                  <Users className="h-16 w-16 text-primary/60" />
+                <div className="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-accent/20 transition-transform group-hover:scale-105">
+                  <Image
+                    src={director.image}
+                    alt={director.name}
+                    width={128}
+                    height={128}
+                    className="h-full w-full object-cover object-top"
+                  />
                 </div>
 
                 <h3 className="mb-2 text-2xl font-bold text-primary">
@@ -93,9 +83,9 @@ const DirectorsPage = () => {
                 <div className="mb-4 font-semibold text-accent">
                   {director.position}
                 </div>
-                <p className="italic leading-relaxed text-muted-foreground">
-                  &quot;{director.message}&quot;
-                </p>
+                <div className="text-muted-foreground">
+                  Mobile: {director.mobile}
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -129,7 +119,8 @@ const DirectorsPage = () => {
                     Service
                   </div>
                   <p className="text-muted-foreground">
-                    Putting our members&apos; needs at the heart of every decision
+                    Putting our members&apos; needs at the heart of every
+                    decision
                   </p>
                 </div>
               </div>

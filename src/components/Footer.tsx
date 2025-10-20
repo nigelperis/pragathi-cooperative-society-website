@@ -12,8 +12,8 @@ const Footer = () => {
           <div>
             <div className="mb-4 flex items-center gap-2">
               <Image
-                src="/Pragathi-LOGO.png"
-                alt="Pragathi logo"
+                src="/pragathi-logo.png"
+                alt="Pragathi Logo"
                 width={60}
                 height={60}
                 className="h-16 w-16"
@@ -41,7 +41,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/directors"
+                  href="/board-of-directors"
                   className="transition-colors hover:text-accent"
                 >
                   Board of Directors

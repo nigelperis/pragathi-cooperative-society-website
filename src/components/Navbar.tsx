@@ -40,7 +40,7 @@ const Navbar = () => {
 
   const aboutDropdown = [
     { name: "History", path: "/history" },
-    { name: "Board of Directors", path: "/directors" },
+    { name: "Board of Directors", path: "/board-of-directors" },
     { name: "Vision & Mission", path: "/vision-mission" },
   ];
 
@@ -60,7 +60,7 @@ const Navbar = () => {
               <div className="relative mr-2">
                 <div className="flex h-18 w-18 items-center justify-center rounded-full transition-all group-hover:scale-105">
                   <Image
-                    src="/Pragathi-LOGO.png"
+                    src="/pragathi-logo.png"
                     alt="Pragathi Co-operative Society Emblem"
                     width={72}
                     height={72}
@@ -95,7 +95,7 @@ const Navbar = () => {
                 <Link href="/" className="flex items-center group">
                   <div className="relative mr-3">
                     <Image
-                      src="/Pragathi-LOGO.png"
+                      src="/pragathi-logo.png"
                       alt="Pragathi Co-operative Society Emblem"
                       width={40}
                       height={40}
@@ -175,7 +175,7 @@ const Navbar = () => {
                 <Link href="/" className="flex items-center">
                   <div className="relative mr-2">
                     <Image
-                      src="/Pragathi-LOGO.png"
+                      src="/pragathi-logo.png"
                       alt="Pragathi Co-operative Society Emblem"
                       width={32}
                       height={32}

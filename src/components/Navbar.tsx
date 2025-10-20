@@ -41,7 +41,6 @@ const Navbar = () => {
   const aboutDropdown = [
     { name: "History", path: "/history" },
     { name: "Board of Directors", path: "/board-of-directors" },
-    { name: "Vision & Mission", path: "/vision-mission" },
   ];
 
   const servicesDropdown = [
@@ -58,7 +57,7 @@ const Navbar = () => {
           <div className="flex justify-center py-6">
             <Link href="/" className="group flex items-center">
               <div className="relative mr-2">
-                <div className="flex h-18 w-18 items-center justify-center rounded-full transition-all group-hover:scale-105">
+                <div className="flex h-18 w-18 items-center justify-center rounded-full">
                   <Image
                     src="/pragathi-logo.png"
                     alt="Pragathi Co-operative Society Emblem"
@@ -99,7 +98,7 @@ const Navbar = () => {
                       alt="Pragathi Co-operative Society Emblem"
                       width={40}
                       height={40}
-                      className="h-10 w-10 rounded-full object-cover transition-all duration-300 group-hover:scale-105"
+                      className="h-10 w-10 rounded-full object-cover"
                       priority
                     />
                   </div>
@@ -120,7 +119,7 @@ const Navbar = () => {
                 {navLinks.map((link) => (
                   <div key={link.path} className="relative group">
                     <Link href={link.path}>
-                      <div className="px-6 py-3 text-accent-foreground font-bold text-sm uppercase tracking-wide hover:bg-white/20 hover:text-primary transition-all duration-200 flex items-center gap-1 rounded-sm border-r border-accent/60 last:border-r-0">
+                      <div className="px-6 py-3 text-accent-foreground font-bold text-sm uppercase tracking-wide hover:text-primary transition-all duration-200 flex items-center gap-1 rounded-sm border-r border-accent/60 last:border-r-0">
                         {link.name}
                         {link.hasDropdown && (
                           <ChevronDown className="h-3 w-3" />
@@ -139,7 +138,6 @@ const Navbar = () => {
                               className="block px-6 py-3 text-gray-700 hover:bg-primary/5 hover:text-primary transition-colors border-b border-gray-100 last:border-b-0 font-medium"
                             >
                               <div className="flex items-center">
-                                <ChevronRight className="h-4 w-4 text-primary mr-2" />
                                 {item.name}
                               </div>
                             </Link>
@@ -149,16 +147,15 @@ const Navbar = () => {
                     )}
 
                     {link.name === "Services" && (
-                      <div className="absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-accent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                         <div className="py-3">
                           {servicesDropdown.map((item) => (
                             <Link
                               key={item.path}
                               href={item.path}
-                              className="block px-6 py-3 text-gray-700 hover:bg-accent/5 hover:text-accent-foreground transition-colors border-b border-gray-100 last:border-b-0 font-medium"
+                              className="block px-6 py-3 text-gray-700 hover:bg-primary/5 hover:text-primary transition-colors border-b border-gray-100 last:border-b-0 font-medium"
                             >
                               <div className="flex items-center">
-                                <ChevronRight className="h-4 w-4 text-accent mr-2" />
                                 {item.name}
                               </div>
                             </Link>

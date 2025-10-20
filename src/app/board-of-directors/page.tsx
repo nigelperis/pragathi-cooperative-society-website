@@ -86,43 +86,39 @@ const DirectorsPage = () => {
           </Card>
         </div>
 
-        <div
-          className={`grid gap-8 justify-items-center md:grid-cols-2 lg:grid-cols-${
-            directors.length === 3 ? 3 : 4
-          }`}
-        >
+        <div className="grid gap-8 justify-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-10 lg:gap-12">
           {directors.map((director, index) => (
             <Card
               key={director.name}
-              className="group animate-fade-in max-w-80 mx-auto overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 h-full"
+              className="group animate-fade-in w-64 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardContent className="p-0 h-full flex flex-col">
-                {/* Large Portrait Photo with Fixed 60:80 Aspect Ratio */}
-                <div className="relative h-90 w-full overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 flex-shrink-0">
+              <CardContent className="p-0 flex flex-col">
+                {/* Large Portrait Photo with Fixed Aspect Ratio */}
+                <div className="relative h-70 w-full bg-white overflow-hidden flex-shrink-0">
                   <Image
                     src={director.image}
                     alt={director.name}
                     fill
-                    className="object-cover object-top transition-transform duration-300 group-hover:scale-110"
+                    className="object-cover object-top scale-102 transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  <div className="absolute inset-0" />
                 </div>
 
                 {/* Content Section */}
-                <div className="p-6 text-center flex-1 flex flex-col">
+                <div className="p-4 text-center h-32 flex flex-col justify-between">
                   <div>
-                    <h3 className="mb-3 text-xl font-bold text-primary leading-tight">
+                    <h3 className="mb-1 text-base font-bold text-primary leading-tight">
                       {director.name}
                     </h3>
-                    <div className="mb-3 inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+                    <div className="mb-2 inline-block rounded-full bg-primary/10 px-2 py-1 text-xs font-semibold text-primary">
                       {director.position}
                     </div>
                   </div>
-                  <div className="flex items-center justify-center gap-2 text-muted-foreground self-center mt-auto">
-                    <Phone className="h-4 w-4" />
-                    <span className="font-medium">
-                      Phone: {director.mobile}
+                  <div className="flex items-center justify-center gap-1 text-muted-foreground">
+                    <Phone className="h-3 w-3" />
+                    <span className="font-medium text-xs">
+                      {director.mobile}
                     </span>
                   </div>
                 </div>

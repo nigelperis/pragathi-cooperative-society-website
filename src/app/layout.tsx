@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Providers from "./providers";
 import "./globals.css";
 
-const raleway = Raleway({
+const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
 });
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <body className={raleway.className}>
+    <body className={montserrat.className}>
       <Providers>
         <div className="flex min-h-screen flex-col">
           <Navbar />

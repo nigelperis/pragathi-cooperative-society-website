@@ -1,21 +1,95 @@
+"use client";
+
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
-import { Camera } from "lucide-react";
-import branchPhoto from "@/assets/branch-photo.jpg";
-import heroImage from "@/assets/hero-community.jpg";
+import { useEffect, useRef } from "react";
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import "photoswipe/style.css";
 
 const GalleryPage = () => {
-  const galleryItems = [
-    { id: 1, title: "Community Gathering", image: heroImage },
-    { id: 2, title: "Branch Opening", image: branchPhoto },
-    { id: 3, title: "Member Service", image: heroImage },
-    { id: 4, title: "Staff Team", image: branchPhoto },
-    { id: 5, title: "Annual Meeting", image: heroImage },
-    { id: 6, title: "Community Event", image: branchPhoto },
-    { id: 7, title: "Financial Workshop", image: heroImage },
-    { id: 8, title: "Branch Interior", image: branchPhoto },
-    { id: 9, title: "Customer Service", image: heroImage },
+  const galleryRef = useRef<HTMLDivElement>(null);
+
+  // Gallery images from public/gallery folder
+  const galleryImages = [
+    "DSC_0773_10_IMGCentury.jpg",
+    "DSC_0776_9_IMGCentury.jpg",
+    "DSC_0782_7_IMGCentury.jpg",
+    "DSC_0785_8_IMGCentury.jpg",
+    "DSC_0788_6_IMGCentury.jpg",
+    "DSC_0792_4_IMGCentury.jpg",
+    "DSC_0794_5_IMGCentury.jpg",
+    "DSC_0805_3_IMGCentury.jpg",
+    "DSC_0809_2_IMGCentury.jpg",
+    "DSC_0810_1_IMGCentury.jpg",
+    "DSC_0815_14_IMGCentury.jpg",
+    "DSC_0821_13_IMGCentury.jpg",
+    "DSC_0827_11_IMGCentury.jpg",
+    "DSC_0834_12_IMGCentury.jpg",
+    "DSC_0852_10_IMGCentury.jpg",
+    "DSC_0854_9_IMGCentury.jpg",
+    "DSC_0856_8_IMGCentury.jpg",
+    "DSC_0860_7_IMGCentury.jpg",
+    "DSC_0862_5_IMGCentury.jpg",
+    "DSC_0866_6_IMGCentury.jpg",
+    "DSC_0868_4_IMGCentury.jpg",
+    "DSC_0871_3_IMGCentury.jpg",
+    "DSC_0873_2_IMGCentury.jpg",
+    "DSC_0874_20_IMGCentury.jpg",
+    "DSC_0881_1_IMGCentury.jpg",
+    "DSC_0883_19_IMGCentury.jpg",
+    "DSC_0885_17_IMGCentury.jpg",
+    "DSC_0890_18_IMGCentury.jpg",
+    "DSC_0894_16_IMGCentury.jpg",
+    "DSC_0897_15_IMGCentury.jpg",
+    "DSC_0899_20_IMGCentury.jpg",
+    "DSC_0901_19_IMGCentury.jpg",
+    "DSC_0903_18_IMGCentury.jpg",
+    "DSC_0905_17_IMGCentury.jpg",
+    "DSC_0910_16_IMGCentury.jpg",
+    "DSC_0911_15_IMGCentury.jpg",
+    "DSC_0913_13_IMGCentury.jpg",
+    "DSC_0914_14_IMGCentury.jpg",
+    "DSC_0916_12_IMGCentury.jpg",
+    "DSC_0918_11_IMGCentury.jpg",
+    "DSC_0933_9_IMGCentury.jpg",
+    "DSC_0935_10_IMGCentury.jpg",
+    "DSC_0948_8_IMGCentury.jpg",
+    "DSC_0960_7_IMGCentury.jpg",
+    "DSC_0967_6_IMGCentury.jpg",
+    "DSC_0980_5_IMGCentury.jpg",
+    "DSC_0982_3_IMGCentury.jpg",
+    "DSC_0985_2_IMGCentury.jpg",
+    "DSC_0987_1_IMGCentury.jpg",
   ];
+
+  const galleryItems = galleryImages.map((filename, index) => ({
+    id: index + 1,
+    src: `/gallery/${filename}`,
+    width: 1200,
+    height: 800,
+  }));
+
+  useEffect(() => {
+    if (!galleryRef.current) return;
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: galleryRef.current,
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+      showHideAnimationType: "zoom",
+      initialZoomLevel: "fit",
+      secondaryZoomLevel: 1,
+      maxZoomLevel: 4,
+    });
+
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+    };
+  }, []);
+
+
 
   return (
     <div className="min-h-screen py-20">
@@ -27,46 +101,45 @@ const GalleryPage = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-7xl gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          ref={galleryRef}
+          className="mx-auto mt-16 max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
           {galleryItems.map((item, index) => (
-            <Card
+            <div
               key={item.id}
-              className="group cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-xl"
-              style={{ animationDelay: `${index * 50}ms` }}
+              className="w-full"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                />
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary/80 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <h3 className="text-lg font-semibold text-primary-foreground">
-                    {item.title}
-                  </h3>
-                </div>
-              </div>
-            </Card>
+              <a
+                href={item.src}
+                data-pswp-width={item.width}
+                data-pswp-height={item.height}
+                target="_blank"
+                rel="noreferrer"
+                className="block"
+              >
+                <Card
+                  className="group cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-xl"
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <div className="relative overflow-hidden">
+                    <Image
+                      src={item.src}
+                      alt={`Gallery photo ${index + 1}`}
+                      width={400}
+                      height={300}
+                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+
+                    />
+                  </div>
+                </Card>
+              </a>
+            </div>
           ))}
         </div>
 
-        <div className="mx-auto mt-16 max-w-3xl">
-          <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
-            <div className="p-8 text-center">
-              <h2 className="mb-4 text-2xl font-bold text-primary">
-                Our Story in Pictures
-              </h2>
-              <p className="leading-relaxed text-foreground">
-                These photos tell the story of Pragathi Co-operative Society—of
-                dedication, trust, and community spirit. Each image represents the
-                relationships we have built and the lives we have touched. We are
-                proud to share these moments with you, our extended family.
-              </p>
-            </div>
-          </Card>
-        </div>
+
       </div>
     </div>
   );

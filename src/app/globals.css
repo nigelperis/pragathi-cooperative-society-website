@@ -141,3 +141,23 @@
     transform: translateZ(0);
   }
 }
+/* Masonry Gallery Styles */
+.masonry-sizer {
+  width: 0;
+}
+
+@media (min-width: 640px) {
+  .masonry-sizer {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-sizer {
+    width: 33.333333%;
+  }
+}
+
+.masonry-item {
+  box-sizing: border-box;
+}

@@ -58,9 +58,7 @@ const HomePage = () => {
         <div className="container relative z-10 mx-auto max-w-7xl px-4">
           <div className="max-w-2xl animate-fade-in text-primary-foreground">
             <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-              Trust. Invest. Prosper,
-              <br />
-              <span className="text-accent">Empowering Lives</span>
+              Trust. Invest. Prosper.
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-primary-foreground/90">
               Your trusted financial partner in Mangalore. Building dreams
@@ -105,7 +103,9 @@ const HomePage = () => {
                 <div className="mb-2 text-3xl font-bold text-primary">
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -115,7 +115,9 @@ const HomePage = () => {
       <section className="py-20">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold text-primary">Our Services</h2>
+            <h2 className="mb-4 text-4xl font-bold text-primary">
+              Our Services
+            </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
               Comprehensive financial solutions designed with your needs in mind
             </p>

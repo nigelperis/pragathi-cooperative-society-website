@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="mb-4 flex items-center gap-2">
               <Image
-                src="/pragathi-logo.png"
+                src="/pragathi_logo.png"
                 alt="Pragathi Logo"
                 width={60}
                 height={60}

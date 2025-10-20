@@ -1,4 +1,3 @@
-import { Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Phone } from "lucide-react";
@@ -6,22 +5,52 @@ import { Phone } from "lucide-react";
 const DirectorsPage = () => {
   const directors = [
     {
+      name: "MR. JOSSEY SEQUIERA ",
+      position: "President",
+      mobile: "9343342012",
+      image: "/bod/jossey-sequiera.jpg",
+    },
+    {
       name: "MR. ROBERT LANCY PAIS",
       position: "Vice President",
       mobile: "9845184284",
-      image: "/Board of Directors/IMG_2208.JPG",
+      image: "/bod/robert-pais.jpg",
     },
     {
       name: "MR. ROMANS BASIL LOBO",
       position: "Director",
       mobile: "9448300593",
-      image: "/Board of Directors/IMG_2206.JPG",
+      image: "/bod/romans-lobo.jpg",
     },
     {
       name: "MR. JOCKIEM STANY ALVARES",
       position: "Director",
       mobile: "9845044983",
-      image: "/Board of Directors/IMG_2207.jpg",
+      image: "/bod/jockiem-alvares.jpg",
+    },
+    {
+      name: "MR. NAVEEN NELSON PINTO",
+      position: "Director",
+      mobile: "9740200777",
+      image: "/bod/naveen-pinto.png",
+    },
+    {
+      name: "MR. ROHAN JOHN DSILVA",
+      position: "Director",
+      mobile: "9900814746",
+      image: "/bod/rohan-dsilva.png",
+    },
+    {
+      name: "MR. BENET DSILVA",
+      position: "Director",
+      mobile: "9845170171",
+      image: "/bod/benet-dsilva.jpg",
+    },
+    {
+      name: "MR. FRANCIS PRAVEEN CRASTA",
+      position: "CEO",
+      mobile: "8197827858",
+      image: "/bod/francis-crasta.jpg",
     },
   ];
 
@@ -29,7 +58,6 @@ const DirectorsPage = () => {
     <div className="min-h-screen py-20">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
-          
           <h1 className="mb-4 text-5xl font-bold text-primary">
             Board of Directors
           </h1>
@@ -58,7 +86,11 @@ const DirectorsPage = () => {
           </Card>
         </div>
 
-        <div className={`grid gap-8 justify-items-center md:grid-cols-2 lg:grid-cols-${directors.length === 3 ? 3 : 4}`}>
+        <div
+          className={`grid gap-8 justify-items-center md:grid-cols-2 lg:grid-cols-${
+            directors.length === 3 ? 3 : 4
+          }`}
+        >
           {directors.map((director, index) => (
             <Card
               key={director.name}
@@ -89,49 +121,14 @@ const DirectorsPage = () => {
                   </div>
                   <div className="flex items-center justify-center gap-2 text-muted-foreground self-center mt-auto">
                     <Phone className="h-4 w-4" />
-                    <span className="font-medium">Phone: {director.mobile}</span>
+                    <span className="font-medium">
+                      Phone: {director.mobile}
+                    </span>
                   </div>
                 </div>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mx-auto mt-20 max-w-7xl">
-          <Card className="border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-accent/10">
-            <CardContent className="p-8 text-center md:p-12">
-              <h2 className="mb-6 text-3xl font-bold text-primary">
-                Our Guiding Principles
-              </h2>
-              <div className="grid gap-8 text-left md:grid-cols-3">
-                <div>
-                  <div className="mb-2 text-xl font-semibold text-primary">
-                    Transparency
-                  </div>
-                  <p className="text-muted-foreground">
-                    Open and honest communication with all stakeholders
-                  </p>
-                </div>
-                <div>
-                  <div className="mb-2 text-xl font-semibold text-primary">
-                    Integrity
-                  </div>
-                  <p className="text-muted-foreground">
-                    Upholding the highest ethical standards in all we do
-                  </p>
-                </div>
-                <div>
-                  <div className="mb-2 text-xl font-semibold text-primary">
-                    Service
-                  </div>
-                  <p className="text-muted-foreground">
-                    Putting our members&apos; needs at the heart of every
-                    decision
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>

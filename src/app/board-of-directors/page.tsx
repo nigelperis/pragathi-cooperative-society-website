@@ -95,7 +95,7 @@ const DirectorsPage = () => {
             >
               <CardContent className="p-0 flex flex-col">
                 {/* Large Portrait Photo with Fixed Aspect Ratio */}
-                <div className="relative h-70 w-full bg-white overflow-hidden shrink-0">
+                <div className="relative h-50 md:h-70 w-full bg-white overflow-hidden shrink-0">
                   <Image
                     src={director.image}
                     alt={director.name}
@@ -106,12 +106,12 @@ const DirectorsPage = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-2 md:p-4 text-center h-24 md:h-32 flex flex-col justify-between">
+                <div className="p-4 md:p-4 text-center h-32 md:h-34 flex flex-col justify-between">
                   <div>
                     <h3 className="mb-1 text-sm md:text-base font-bold text-primary leading-tight">
                       {director.name}
                     </h3>
-                    <div className="mb-1 md:mb-2 inline-block rounded-full bg-primary/10 px-2 py-1 text-xs font-semibold text-primary">
+                    <div className="my-3 md:mb-2 inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold text-primary">
                       {director.position}
                     </div>
                   </div>

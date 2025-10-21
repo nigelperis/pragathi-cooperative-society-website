@@ -108,15 +108,15 @@ const Footer = () => {
             <h3 className="mb-4 text-lg font-semibold">Head Office</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
-                <MapPin className="mt-1 h-4 w-4 flex-shrink-0" />
+                <MapPin className="mt-1 h-4 w-4 shrink-0" />
                 <span>Kulshekar, Mangalore</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 flex-shrink-0" />
+                <Phone className="h-4 w-4 shrink-0" />
                 <span>+91 824 XXXXXXX</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 flex-shrink-0" />
+                <Mail className="h-4 w-4 shrink-0" />
                 <span>info@pragathicoop.com</span>
               </li>
             </ul>
@@ -125,7 +125,7 @@ const Footer = () => {
 
         <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/60">
           <p>
-            &copy; {currentYear} Pragathi Co-operative Society Ltd. All rights
+            &copy; {currentYear} Pragathi Co-operative Society. All rights
             reserved.
           </p>
         </div>

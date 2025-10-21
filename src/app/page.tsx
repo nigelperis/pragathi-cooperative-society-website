@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import heroImage from "@/assets/hero-community.jpg";
 
 const HomePage = () => {
   const services = [
@@ -50,19 +49,19 @@ const HomePage = () => {
       <section className="relative flex h-[600px] items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage.src})` }}
+          style={{ backgroundImage: "url('/pragathi-hero.jpg')" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70" />
+          {/* <div className="absolute inset-0 bg-linear-to-r from-primary/95 via-primary/85 to-primary/70" /> */}
+          <div className="absolute inset-0 bg-linear-to-r from-primary/85 via-primary/75 to-primary/65" />
         </div>
 
         <div className="container relative z-10 mx-auto max-w-7xl px-4">
           <div className="max-w-2xl animate-fade-in text-primary-foreground">
-            <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
+            <h1 className="mb-6 text-4xl font-bold leading-tight md:text-7xl">
               Trust. Invest. Prosper.
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-primary-foreground/90">
-              Your trusted financial partner in Mangalore. Building dreams
-              together through savings, deposits, and loans that matter.
+              Your trusted co-operative partner.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
@@ -156,7 +155,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-primary to-primary/90 py-20 text-primary-foreground">
+      <section className="bg-linear-to-br from-primary to-primary/90 py-20 text-primary-foreground">
         <div className="container mx-auto max-w-7xl px-4 text-center">
           <h2 className="mb-6 text-4xl font-bold">Join Our Growing Family</h2>
           <p className="mx-auto mb-8 max-w-2xl text-xl text-primary-foreground/90">

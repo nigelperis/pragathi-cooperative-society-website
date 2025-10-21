@@ -68,7 +68,7 @@ const DirectorsPage = () => {
         </div>
 
         <div className="mx-auto mb-16 mt-16 max-w-7xl">
-          <Card className="animate-fade-in border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10">
+          <Card className="animate-fade-in border-2 border-primary/20 bg-linear-to-br from-primary/5 to-primary/10">
             <CardContent className="p-8 md:p-12">
               <h2 className="mb-4 text-2xl font-bold text-primary">
                 A Message from Our Leadership
@@ -95,7 +95,7 @@ const DirectorsPage = () => {
             >
               <CardContent className="p-0 flex flex-col">
                 {/* Large Portrait Photo with Fixed Aspect Ratio */}
-                <div className="relative h-70 w-full bg-white overflow-hidden flex-shrink-0">
+                <div className="relative h-70 w-full bg-white overflow-hidden shrink-0">
                   <Image
                     src={director.image}
                     alt={director.name}

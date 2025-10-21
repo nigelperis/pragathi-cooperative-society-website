@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +52,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* Main Header - Always visible at top */}
-      <div className="bg-gradient-to-r from-primary via-primary/90 to-primary text-primary-foreground">
+      <div className="bg-linear-to-r from-primary via-primary/90 to-primary text-primary-foreground">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex justify-center py-6">
             <Link href="/" className="group flex items-center">
@@ -69,7 +69,7 @@ const Navbar = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-lg md:text-2xl font-bold text-primary-foreground leading-tight tracking-wide">
+                <h1 className="text-lg md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide">
                   PRAGATHI CO-OPERATIVE SOCIETY
                 </h1>
               </div>
@@ -84,7 +84,7 @@ const Navbar = () => {
           isScrolled
             ? "fixed top-0 left-0 right-0 shadow-xl"
             : "relative shadow-lg"
-        } z-50 bg-gradient-to-r from-accent via-accent to-accent transition-all duration-300`}
+        } z-50 bg-linear-to-r from-accent via-accent to-accent transition-all duration-300`}
       >
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex items-center h-16 relative">

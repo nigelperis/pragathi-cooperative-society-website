@@ -11,9 +11,9 @@ const GalleryPage = () => {
 
   // Gallery images from public/gallery folder
   const galleryImages = [
-    "DSC_0773_10_IMGCentury.jpg",
     "DSC_0776_9_IMGCentury.jpg",
     "DSC_0782_7_IMGCentury.jpg",
+    "DSC_0773_10_IMGCentury.jpg",
     "DSC_0785_8_IMGCentury.jpg",
     "DSC_0788_6_IMGCentury.jpg",
     "DSC_0792_4_IMGCentury.jpg",
@@ -89,13 +89,13 @@ const GalleryPage = () => {
     };
   }, []);
 
-
-
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
-          <h1 className="mb-4 text-5xl font-bold text-primary">Photo Gallery</h1>
+          <h1 className="mb-4 text-5xl font-bold text-primary">
+            Photo Gallery
+          </h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
             Capturing moments of service, growth, and community connection
           </p>
@@ -106,10 +106,7 @@ const GalleryPage = () => {
           className="mx-auto mt-16 max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           {galleryItems.map((item, index) => (
-            <div
-              key={item.id}
-              className="w-full"
-            >
+            <div key={item.id} className="w-full">
               <a
                 href={item.src}
                 data-pswp-width={item.width}
@@ -130,7 +127,6 @@ const GalleryPage = () => {
                       height={300}
                       className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-
                     />
                   </div>
                 </Card>
@@ -138,8 +134,6 @@ const GalleryPage = () => {
             </div>
           ))}
         </div>
-
-
       </div>
     </div>
   );

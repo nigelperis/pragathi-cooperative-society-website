@@ -66,7 +66,7 @@ const HistoryPage = () => {
             <CardContent className="p-8">
               <div className="mb-6 text-center">
                 <h3 className="text-2xl font-bold text-primary mb-2">
-                  PRAGATHI CO-OPERATIVE SOCIETY LTD
+                  PRAGATHI CO-OPERATIVE SOCIETY
                 </h3>
                 <p className="text-lg text-muted-foreground">
                   L.NO-400, KULSHEKAR, MANGALORE
@@ -160,7 +160,7 @@ const HistoryPage = () => {
               >
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent/20">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/20">
                       <Calendar className="h-6 w-6 text-accent" />
                     </div>
                     <div>
@@ -182,7 +182,7 @@ const HistoryPage = () => {
         </div>
 
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
-          <Card className="animate-fade-in border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 transition-shadow hover:shadow-lg">
+          <Card className="animate-fade-in border-2 border-primary/20 bg-linear-to-br from-primary/5 to-primary/10 transition-shadow hover:shadow-lg">
             <CardContent className="p-8">
               <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
                 <Eye className="h-8 w-8 text-primary" />
@@ -199,7 +199,7 @@ const HistoryPage = () => {
           </Card>
 
           <Card
-            className="animate-fade-in border-2 border-accent/20 bg-gradient-to-br from-accent/5 to-accent/10 transition-shadow hover:shadow-lg"
+            className="animate-fade-in border-2 border-accent/20 bg-linear-to-br from-accent/5 to-accent/10 transition-shadow hover:shadow-lg"
             style={{ animationDelay: "100ms" }}
           >
             <CardContent className="p-8">

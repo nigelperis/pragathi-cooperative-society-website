@@ -18,34 +18,36 @@ const HistoryPage = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen py-12 md:py-20">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="animate-fade-in text-center">
-          <h1 className="mb-4 text-5xl font-bold text-primary">Our History</h1>
-          <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
+        {/* <div className="animate-fade-in text-center">
+          <h1 className="mb-4 text-3xl font-bold text-primary md:text-5xl">
+            Our History
+          </h1>
+          <p className="mx-auto text-lg text-muted-foreground md:max-w-3xl md:text-xl">
             A journey of trust, growth, and community empowerment
           </p>
         </div>
 
-        <div className="mx-auto mb-20 mt-16 max-w-7xl">
-          <Card className="animate-fade-in p-8 shadow-lg md:p-12">
+        <div className="mx-auto mb-16 mt-12 max-w-7xl md:mb-20 md:mt-16">
+          <Card className="animate-fade-in p-6 shadow-lg md:p-12">
             <CardContent>
               <div className="prose prose-lg max-w-none">
-                <p className="mb-6 text-lg leading-relaxed text-foreground">
+                <p className="mb-6 text-base leading-relaxed text-foreground md:text-lg">
                   Pragathi Co-operative Society Ltd was founded with a simple
                   yet powerful vision: to create a financial institution that
                   truly belongs to the people it serves. Headquartered in
                   Kulshekar, Mangalore, we have been a pillar of support for
                   countless families and small businesses in our community.
                 </p>
-                <p className="mb-6 text-lg leading-relaxed text-foreground">
+                <p className="mb-6 text-base leading-relaxed text-foreground md:text-lg">
                   What started as a small cooperative has grown into a trusted
                   network of seven branches across Mangalore, each one a
                   testament to the faith and support of our members. We have
                   always believed that banking should be personal, accessible,
                   and driven by the needs of the community.
                 </p>
-                <p className="text-lg leading-relaxed text-foreground">
+                <p className="text-base leading-relaxed text-foreground md:text-lg">
                   Through the years, we have helped families build their homes,
                   supported entrepreneurs in growing their businesses, and
                   provided a safe haven for savings and investments. Every
@@ -56,89 +58,135 @@ const HistoryPage = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
 
-        <div className="mb-20">
-          <h2 className="mb-12 text-center text-3xl font-bold text-primary">
+        <div className="mb-16 md:mb-20">
+          <h2 className="mb-8 text-center text-2xl font-bold text-primary md:mb-12 md:text-3xl">
             Leadership History
           </h2>
           <Card className="animate-fade-in mx-auto max-w-7xl shadow-lg">
-            <CardContent className="p-8">
+            <CardContent className="p-4 md:p-8">
               <div className="mb-6 text-center">
-                <h3 className="text-2xl font-bold text-primary mb-2">
+                <h3 className="mb-2 text-xl font-bold text-primary md:text-2xl">
                   PRAGATHI CO-OPERATIVE SOCIETY
                 </h3>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-base text-muted-foreground md:text-lg">
                   L.NO-400, KULSHEKAR, MANGALORE
                 </p>
               </div>
               <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
+                <table className="w-full border-collapse text-sm md:text-base">
                   <thead>
                     <tr className="border-b-2 border-primary/20">
-                      <th className="p-4 text-left font-bold text-primary">
-                        SL No
+                      <th className="p-2 text-left font-bold text-primary md:p-4">
+                        Sl No
                       </th>
-                      <th className="p-4 text-left font-bold text-primary">
+                      <th className="p-2 text-left font-bold text-primary md:p-4">
                         TENURE
                       </th>
-                      <th className="p-4 text-left font-bold text-primary">
+                      <th className="p-2 text-left font-bold text-primary md:p-4">
                         NAME
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">1</td>
-                      <td className="p-4">1991 to 17-12-1998</td>
-                      <td className="p-4 font-medium">MR. P.M. CASTELINO</td>
+                      <td className="p-2 font-medium md:p-4">1</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">1991 to</span>
+                        <span className="block md:inline">17-12-1998</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">
+                        MR. P.M. CASTELINO
+                      </td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">2</td>
-                      <td className="p-4">18-12-1998 to 14-02-1999</td>
-                      <td className="p-4 font-medium">MR. KIRAN CASTELINO</td>
+                      <td className="p-2 font-medium md:p-4">2</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">18-12-1998 to</span>
+                        <span className="block md:inline">14-02-1999</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">
+                        MR. KIRAN CASTELINO
+                      </td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">3</td>
-                      <td className="p-4">06-03-1999 to 31-08-2001</td>
-                      <td className="p-4 font-medium">MR. P.M. CASTELINO</td>
+                      <td className="p-2 font-medium md:p-4">3</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">06-03-1999 to</span>
+                        <span className="block md:inline">31-08-2001</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">
+                        MR. P.M. CASTELINO
+                      </td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">4</td>
-                      <td className="p-4">26-09-2001 to 31-08-2003</td>
-                      <td className="p-4 font-medium">MR. RONALD CASTELINO</td>
+                      <td className="p-2 font-medium md:p-4">4</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">26-09-2001 to</span>
+                        <span className="block md:inline">31-08-2003</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">
+                        MR. RONALD CASTELINO
+                      </td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">5</td>
-                      <td className="p-4">01-09-2003 to 01-09-2008</td>
-                      <td className="p-4 font-medium">MR. RONALD CASTELINO</td>
+                      <td className="p-2 font-medium md:p-4">5</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">01-09-2003 to</span>
+                        <span className="block md:inline">01-09-2008</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">
+                        MR. RONALD CASTELINO
+                      </td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">6</td>
-                      <td className="p-4">02-09-2008 to 02-09-2013</td>
-                      <td className="p-4 font-medium">MR. RONALD CASTELINO</td>
+                      <td className="p-2 font-medium md:p-4">6</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">02-09-2008 to</span>
+                        <span className="block md:inline">02-09-2013</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">
+                        MR. RONALD CASTELINO
+                      </td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">7</td>
-                      <td className="p-4">03-09-2013 to 03-09-2018</td>
-                      <td className="p-4 font-medium">MR. RONALD CASTELINO</td>
+                      <td className="p-2 font-medium md:p-4">7</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">03-09-2013 to</span>
+                        <span className="block md:inline">03-09-2018</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">
+                        MR. RONALD CASTELINO
+                      </td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">8</td>
-                      <td className="p-4">04-09-2018 to 27-11-2019</td>
-                      <td className="p-4 font-medium">MR. JEEVAN VAS</td>
+                      <td className="p-2 font-medium md:p-4">8</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">04-09-2018 to</span>
+                        <span className="block md:inline">27-11-2019</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">MR. JEEVAN VAS</td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">9</td>
-                      <td className="p-4">30-12-2019 to 18-08-2023</td>
-                      <td className="p-4 font-medium">
+                      <td className="p-2 font-medium md:p-4">9</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">30-12-2019 to</span>
+                        <span className="block md:inline">18-08-2023</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">
                         MR. BENET D&apos;SILVA
                       </td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-4 font-medium">10</td>
-                      <td className="p-4">26-08-2023 to Present</td>
-                      <td className="p-4 font-medium">MR. JOSSY SEQUEIRA</td>
+                      <td className="p-2 font-medium md:p-4">10</td>
+                      <td className="p-2 md:p-4">
+                        <span className="block md:inline">26-08-2023 to</span>
+                        <span className="block md:inline">Present</span>
+                      </td>
+                      <td className="p-2 font-medium md:p-4">
+                        MR. JOSSY SEQUEIRA
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -146,31 +194,31 @@ const HistoryPage = () => {
             </CardContent>
           </Card>
         </div>
-
-        <div className="mb-20">
-          <h2 className="mb-12 text-center text-3xl font-bold text-primary">
+        {/* 
+        <div className="mb-16 md:mb-20">
+          <h2 className="mb-8 text-center text-2xl font-bold text-primary md:mb-12 md:text-3xl">
             Key Milestones
           </h2>
-          <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
+          <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 md:gap-8">
             {milestones.map((milestone, index) => (
               <Card
                 key={milestone.title}
                 className="animate-fade-in transition-shadow hover:shadow-lg"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="p-8">
+                <CardContent className="p-6 md:p-8">
                   <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/20">
-                      <Calendar className="h-6 w-6 text-accent" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/20 md:h-12 md:w-12">
+                      <Calendar className="h-5 w-5 text-accent md:h-6 md:w-6" />
                     </div>
                     <div>
-                      <div className="mb-2 text-2xl font-bold text-accent">
+                      <div className="mb-1 text-xl font-bold text-accent md:mb-2 md:text-2xl">
                         {milestone.year}
                       </div>
-                      <h3 className="mb-3 text-xl font-semibold text-primary">
+                      <h3 className="mb-2 text-lg font-semibold text-primary md:mb-3 md:text-xl">
                         {milestone.title}
                       </h3>
-                      <p className="leading-relaxed text-muted-foreground">
+                      <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
                         {milestone.description}
                       </p>
                     </div>
@@ -181,16 +229,16 @@ const HistoryPage = () => {
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 md:gap-8">
           <Card className="animate-fade-in border-2 border-primary/20 bg-linear-to-br from-primary/5 to-primary/10 transition-shadow hover:shadow-lg">
-            <CardContent className="p-8">
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
-                <Eye className="h-8 w-8 text-primary" />
+            <CardContent className="p-6 md:p-8">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 md:mb-6 md:h-16 md:w-16">
+                <Eye className="h-6 w-6 text-primary md:h-8 md:w-8" />
               </div>
-              <h3 className="mb-4 text-2xl font-bold text-primary">
+              <h3 className="mb-3 text-xl font-bold text-primary md:mb-4 md:text-2xl">
                 Our Vision
               </h3>
-              <p className="leading-relaxed text-foreground">
+              <p className="text-sm leading-relaxed text-foreground md:text-base">
                 To be the most trusted and accessible cooperative society in the
                 region, empowering every member of our community to achieve
                 financial security and prosperity.
@@ -202,21 +250,21 @@ const HistoryPage = () => {
             className="animate-fade-in border-2 border-accent/20 bg-linear-to-br from-accent/5 to-accent/10 transition-shadow hover:shadow-lg"
             style={{ animationDelay: "100ms" }}
           >
-            <CardContent className="p-8">
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/20">
-                <Target className="h-8 w-8 text-accent" />
+            <CardContent className="p-6 md:p-8">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent/20 md:mb-6 md:h-16 md:w-16">
+                <Target className="h-6 w-6 text-accent md:h-8 md:w-8" />
               </div>
-              <h3 className="mb-4 text-2xl font-bold text-primary">
+              <h3 className="mb-3 text-xl font-bold text-primary md:mb-4 md:text-2xl">
                 Our Mission
               </h3>
-              <p className="leading-relaxed text-foreground">
+              <p className="text-sm leading-relaxed text-foreground md:text-base">
                 To provide transparent, reliable, and compassionate financial
                 services that strengthen families, support local businesses, and
                 foster community development through mutual cooperation.
               </p>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </div>
     </div>
   );

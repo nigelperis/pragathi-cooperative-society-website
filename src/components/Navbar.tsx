@@ -130,7 +130,7 @@ const Navbar = () => {
                     {/* Enhanced Dropdown Menus */}
                     {link.name === "About" && (
                       <div className="absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <div className="py-3">
+                        <div>
                           {aboutDropdown.map((item) => (
                             <Link
                               key={item.path}
@@ -148,7 +148,7 @@ const Navbar = () => {
 
                     {link.name === "Services" && (
                       <div className="absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <div className="py-3">
+                        <div>
                           {servicesDropdown.map((item) => (
                             <Link
                               key={item.path}

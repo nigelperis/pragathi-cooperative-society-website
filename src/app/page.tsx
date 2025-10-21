@@ -52,7 +52,7 @@ const HomePage = () => {
           style={{ backgroundImage: "url('/pragathi-hero.jpg')" }}
         >
           {/* <div className="absolute inset-0 bg-linear-to-r from-primary/95 via-primary/85 to-primary/70" /> */}
-          <div className="absolute inset-0 bg-linear-to-r from-primary/85 via-primary/75 to-primary/65" />
+          <div className="absolute inset-0 bg-linear-to-r from-primary/75 via-primary/70 to-primary/65" />
         </div>
 
         <div className="container relative z-10 mx-auto max-w-7xl px-4">

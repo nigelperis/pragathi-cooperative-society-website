@@ -86,11 +86,11 @@ const DirectorsPage = () => {
           </Card>
         </div>
 
-        <div className="grid gap-8 justify-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-10 lg:gap-12">
+        <div className="grid grid-cols-2 gap-4 justify-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-10 lg:gap-12">
           {directors.map((director, index) => (
             <Card
               key={director.name}
-              className="group animate-fade-in w-64 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+              className="group animate-fade-in w-full max-w-64 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardContent className="p-0 flex flex-col">
@@ -106,12 +106,12 @@ const DirectorsPage = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-4 text-center h-32 flex flex-col justify-between">
+                <div className="p-2 md:p-4 text-center h-24 md:h-32 flex flex-col justify-between">
                   <div>
-                    <h3 className="mb-1 text-base font-bold text-primary leading-tight">
+                    <h3 className="mb-1 text-sm md:text-base font-bold text-primary leading-tight">
                       {director.name}
                     </h3>
-                    <div className="mb-2 inline-block rounded-full bg-primary/10 px-2 py-1 text-xs font-semibold text-primary">
+                    <div className="mb-1 md:mb-2 inline-block rounded-full bg-primary/10 px-2 py-1 text-xs font-semibold text-primary">
                       {director.position}
                     </div>
                   </div>

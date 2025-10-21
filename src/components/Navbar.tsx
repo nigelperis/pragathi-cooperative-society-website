@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
+  const [desktopDropdowns, setDesktopDropdowns] = useState<string[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,10 +29,24 @@ const Navbar = () => {
     );
   };
 
+  const handleDesktopDropdown = (name: string, action: 'open' | 'close') => {
+    setDesktopDropdowns((prev) => {
+      if (action === 'open') {
+        return prev.includes(name) ? prev : [...prev, name];
+      } else {
+        return prev.filter((item) => item !== name);
+      }
+    });
+  };
+
+  const closeAllDropdowns = () => {
+    setDesktopDropdowns([]);
+  };
+
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about", hasDropdown: true },
-    { name: "Services", path: "/services", hasDropdown: true },
+    { name: "Services", path: "/services" }, // Removed hasDropdown: true
     { name: "Branches", path: "/branches" },
     { name: "Gallery", path: "/gallery" },
     { name: "Careers", path: "/careers" },
@@ -43,11 +58,12 @@ const Navbar = () => {
     { name: "Board of Directors", path: "/board-of-directors" },
   ];
 
-  const servicesDropdown = [
-    { name: "Loans", path: "/loans" },
-    { name: "Deposits", path: "/deposits" },
-    { name: "Facilities", path: "/facilities" },
-  ];
+  // Commented out services dropdown - no longer needed
+  // const servicesDropdown = [
+  //   { name: "Loans", path: "/loans" },
+  //   { name: "Deposits", path: "/deposits" },
+  //   { name: "Facilities", path: "/facilities" },
+  // ];
 
   return (
     <div className="relative">
@@ -80,11 +96,10 @@ const Navbar = () => {
 
       {/* Navigation Bar - Becomes sticky */}
       <nav
-        className={`${
-          isScrolled
+        className={`${isScrolled
             ? "fixed top-0 left-0 right-0 shadow-xl"
             : "relative shadow-lg"
-        } z-50 bg-linear-to-r from-accent via-accent to-accent transition-all duration-300`}
+          } z-50 bg-linear-to-r from-accent via-accent to-accent transition-all duration-300`}
       >
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex items-center h-16 relative">
@@ -111,30 +126,46 @@ const Navbar = () => {
 
             {/* Desktop Navigation - Shifts right when logo is visible */}
             <div
-              className={`hidden lg:flex items-center w-full transition-all duration-300 ${
-                isScrolled ? "justify-end pr-4" : "justify-center"
-              }`}
+              className={`hidden lg:flex items-center w-full transition-all duration-300 ${isScrolled ? "justify-end pr-4" : "justify-center"
+                }`}
             >
               <div className="flex items-center space-x-1">
                 {navLinks.map((link) => (
-                  <div key={link.path} className="relative group">
-                    <Link href={link.path}>
-                      <div className="px-6 py-3 text-accent-foreground font-bold text-sm uppercase tracking-wide hover:text-primary transition-all duration-200 flex items-center gap-1 rounded-sm border-r border-accent/60 last:border-r-0">
-                        {link.name}
-                        {link.hasDropdown && (
+                  <div key={link.path} className="relative">
+                    {link.hasDropdown ? (
+                      <div
+                        onMouseEnter={() => handleDesktopDropdown(link.name, 'open')}
+                        onMouseLeave={() => handleDesktopDropdown(link.name, 'close')}
+                      >
+                        <div className="px-6 py-3 text-accent-foreground font-bold text-sm uppercase tracking-wide hover:text-primary transition-all duration-200 flex items-center gap-1 rounded-sm border-r border-accent/60 last:border-r-0 cursor-pointer">
+                          {link.name}
                           <ChevronDown className="h-3 w-3" />
-                        )}
+                        </div>
                       </div>
-                    </Link>
+                    ) : (
+                      <Link href={link.path}>
+                        <div className="px-6 py-3 text-accent-foreground font-bold text-sm uppercase tracking-wide hover:text-primary transition-all duration-200 flex items-center gap-1 rounded-sm border-r border-accent/60 last:border-r-0">
+                          {link.name}
+                        </div>
+                      </Link>
+                    )}
 
                     {/* Enhanced Dropdown Menus */}
                     {link.name === "About" && (
-                      <div className="absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div
+                        className={`absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-300 z-50 ${desktopDropdowns.includes("About")
+                            ? "opacity-100 visible"
+                            : "opacity-0 invisible"
+                          }`}
+                        onMouseEnter={() => handleDesktopDropdown("About", 'open')}
+                        onMouseLeave={() => handleDesktopDropdown("About", 'close')}
+                      >
                         <div>
                           {aboutDropdown.map((item) => (
                             <Link
                               key={item.path}
                               href={item.path}
+                              onClick={closeAllDropdowns}
                               className="block px-6 py-3 text-gray-700 hover:bg-primary/5 hover:text-primary transition-colors border-b border-gray-100 last:border-b-0 font-medium"
                             >
                               <div className="flex items-center">
@@ -146,13 +177,22 @@ const Navbar = () => {
                       </div>
                     )}
 
-                    {link.name === "Services" && (
-                      <div className="absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    {/* Commented out Services dropdown */}
+                    {/* {link.name === "Services" && (
+                      <div
+                        className={`absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-300 z-50 ${desktopDropdowns.includes("Services")
+                            ? "opacity-100 visible"
+                            : "opacity-0 invisible"
+                          }`}
+                        onMouseEnter={() => handleDesktopDropdown("Services", 'open')}
+                        onMouseLeave={() => handleDesktopDropdown("Services", 'close')}
+                      >
                         <div>
                           {servicesDropdown.map((item) => (
                             <Link
                               key={item.path}
                               href={item.path}
+                              onClick={closeAllDropdowns}
                               className="block px-6 py-3 text-gray-700 hover:bg-primary/5 hover:text-primary transition-colors border-b border-gray-100 last:border-b-0 font-medium"
                             >
                               <div className="flex items-center">
@@ -162,7 +202,7 @@ const Navbar = () => {
                           ))}
                         </div>
                       </div>
-                    )}
+                    )} */}
                   </div>
                 ))}
               </div>
@@ -216,9 +256,8 @@ const Navbar = () => {
                     >
                       <span className="text-lg">{link.name}</span>
                       <ChevronDown
-                        className={`h-5 w-5 text-gray-600 transition-transform duration-200 ${
-                          openDropdowns.includes(link.name) ? "rotate-180" : ""
-                        }`}
+                        className={`h-5 w-5 text-gray-600 transition-transform duration-200 ${openDropdowns.includes(link.name) ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                   ) : (
@@ -247,7 +286,8 @@ const Navbar = () => {
                     </div>
                   )}
 
-                  {link.name === "Services" &&
+                  {/* Commented out Services mobile dropdown */}
+                  {/* {link.name === "Services" &&
                     openDropdowns.includes("Services") && (
                       <div className="bg-gray-50 border-b border-gray-100">
                         {servicesDropdown.map((item) => (
@@ -261,7 +301,7 @@ const Navbar = () => {
                           </Link>
                         ))}
                       </div>
-                    )}
+                    )} */}
                 </div>
               ))}
             </div>

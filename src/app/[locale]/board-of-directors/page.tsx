@@ -54,6 +54,30 @@ const DirectorsPage = async () => {
       mobile: "8197827858",
       image: "/bod/francis-crasta.jpg",
     },
+    {
+      name: "MRS. ALICE LOBO",
+      position: "Director",
+      mobile: "9343766086",
+      image: "/bod/alice-lobo.jpg",
+    },
+    {
+      name: "MRS. LILLY DSOUZA",
+      position: "Director",
+      mobile: "9880076962",
+      image: "/bod/lilly-dsouza.jpg",
+    },
+    {
+      name: "MR. DONY DCUNHA",
+      position: "Director",
+      mobile: "9343560592",
+      image: "/bod/dony-dcunha.jpg",
+    },
+    {
+      name: "MR. NOEL JOSEPH DSOUZA",
+      position: "Director",
+      mobile: "9448857337",
+      image: "/bod/noel-dsouza.jpg",
+    },
   ];
 
   return (

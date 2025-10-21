@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import {
   Wallet,
   FileText,
@@ -9,11 +10,13 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-const FacilitiesPage = () => {
+const FacilitiesPage = async () => {
+  const t = await getTranslations();
+
   const facilities = [
     {
       icon: Wallet,
-      title: "Savings Bank Account",
+      title: t('services.savingsAccount'),
       description:
         "Secure and convenient savings account with competitive interest rates. Build your future with us.",
       features: [
@@ -25,7 +28,7 @@ const FacilitiesPage = () => {
     },
     {
       icon: Receipt,
-      title: "Current Account",
+      title: t('services.currentAccount'),
       description:
         "Ideal for businesses and frequent transactions. Manage your finances with flexibility.",
       features: [
@@ -37,7 +40,7 @@ const FacilitiesPage = () => {
     },
     {
       icon: TrendingUp,
-      title: "Fixed Deposits",
+      title: t('services.fixedDeposit'),
       description:
         "Guaranteed returns with flexible tenure options. Let your money grow safely.",
       features: [
@@ -49,7 +52,7 @@ const FacilitiesPage = () => {
     },
     {
       icon: FileText,
-      title: "Recurring Deposits",
+      title: t('services.recurringDeposit'),
       description:
         "Cultivate a saving habit with monthly deposits. Small amounts, big returns.",
       features: [
@@ -113,11 +116,10 @@ const FacilitiesPage = () => {
       <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
           <h1 className="mb-4 text-5xl font-bold text-primary">
-            Our Facilities &amp; Schemes
+            {t('navigation.facilities')}
           </h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-            Comprehensive banking solutions designed to help you save, grow, and
-            secure your financial future
+            {t('services.description')}
           </p>
         </div>
 

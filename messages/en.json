@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "loans": "Loans",
+    "facilities": "Facilities",
+    "branches": "Branches",
+    "gallery": "Gallery",
+    "careers": "Careers",
+    "contact": "Contact",
+    "history": "History",
+    "boardOfDirectors": "Board of Directors"
+  },
+  "common": {
+    "welcome": "Welcome",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "getStarted": "Get Started",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "home": {
+    "title": "Trust. Invest. Prosper.",
+    "subtitle": "Your trusted co-operative partner.",
+    "heroDescription": "Empowering communities through cooperative banking and financial services since our establishment.",
+    "ourServices": "Our Services",
+    "whyChooseUs": "Why Choose Us",
+    "trustworthy": "Trustworthy",
+    "trustworthyDesc": "Decades of reliable service to our community",
+    "competitive": "Competitive Rates",
+    "competitiveDesc": "Best interest rates for loans and deposits",
+    "community": "Community Focused",
+    "communityDesc": "Supporting local development and growth",
+    "joinFamily": "Join Our Growing Family",
+    "joinFamilyDesc": "Experience the warmth of community banking. Let us help you achieve your financial goals."
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Comprehensive financial services tailored to your needs",
+    "savingsAccount": "Savings Account",
+    "fixedDeposit": "Fixed Deposit",
+    "recurringDeposit": "Recurring Deposit",
+    "currentAccount": "Current Account"
+  },
+  "loans": {
+    "title": "Loan Services",
+    "description": "Flexible loan options to meet your financial requirements",
+    "personalLoan": "Personal Loan",
+    "homeLoan": "Home Loan",
+    "businessLoan": "Business Loan",
+    "educationLoan": "Education Loan",
+    "vehicleLoan": "Vehicle Loan"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us for any queries or assistance",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "workingHours": "Working Hours",
+    "mondayToFriday": "Monday to Friday: 9:00 AM - 5:00 PM",
+    "saturday": "Saturday: 9:00 AM - 1:00 PM",
+    "sunday": "Sunday: Closed"
+  }
+}

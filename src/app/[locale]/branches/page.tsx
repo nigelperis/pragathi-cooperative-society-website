@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { getTranslations } from 'next-intl/server';
 import { MapPin, Clock, Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import branchPhoto from "@/assets/branch-photo.jpg";
 
-const BranchesPage = () => {
+const BranchesPage = async () => {
+  const t = await getTranslations();
+
   const branches = [
     {
       name: "Kulshekar (Head Office)",
@@ -52,7 +55,7 @@ const BranchesPage = () => {
     <div className="min-h-screen py-20">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
-          <h1 className="mb-4 text-5xl font-bold text-primary">Our Branches</h1>
+          <h1 className="mb-4 text-5xl font-bold text-primary">{t('navigation.branches')}</h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
             Find us at seven convenient locations across Mangalore, always ready
             to serve you
@@ -106,21 +109,6 @@ const BranchesPage = () => {
             </Card>
           ))}
         </div>
-
-        {/* <div className="mx-auto mt-16 max-w-7xl">
-          <Card className="border-primary/20 bg-primary/5">
-            <CardContent className="p-8 text-center">
-              <h2 className="mb-4 text-2xl font-bold text-primary">
-                Visit Us Today
-              </h2>
-              <p className="leading-relaxed text-foreground">
-                Our friendly staff at each branch is ready to assist you with
-                all your banking needs. Drop by during working hours or call
-                ahead to schedule an appointment with our financial advisors.
-              </p>
-            </CardContent>
-          </Card>
-        </div> */}
       </div>
     </div>
   );

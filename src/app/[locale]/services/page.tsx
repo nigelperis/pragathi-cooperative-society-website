@@ -1,15 +1,18 @@
 import Image from "next/image";
+import { getTranslations } from 'next-intl/server';
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const t = await getTranslations();
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
 
           <div className="animate-fade-in text-center">
-          <h1 className="mb-4 text-5xl font-bold text-primary">Our Services</h1>
+          <h1 className="mb-4 text-5xl font-bold text-primary">{t('navigation.services')}</h1>
           <p className="mx-auto mb-16 max-w-3xl text-xl text-muted-foreground">
-            Pragathi Co-operative Society Services
+            {t('services.description')}
           </p>
         </div>
           

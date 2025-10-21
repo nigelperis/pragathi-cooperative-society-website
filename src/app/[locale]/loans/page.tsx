@@ -1,13 +1,16 @@
 import Link from "next/link";
+import { getTranslations } from 'next-intl/server';
 import { Home, Car, Gem, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const LoansPage = () => {
+const LoansPage = async () => {
+  const t = await getTranslations();
+
   const loans = [
     {
       icon: Home,
-      title: "Property Loans",
+      title: t('loans.homeLoan'),
       description:
         "Make your dream home a reality with our flexible property loans. Transparent terms, competitive rates.",
       features: [
@@ -21,7 +24,7 @@ const LoansPage = () => {
     },
     {
       icon: Car,
-      title: "Vehicle Loans",
+      title: t('loans.vehicleLoan'),
       description:
         "Drive your dream vehicle today. We offer loans for two-wheelers, cars, and commercial vehicles.",
       features: [
@@ -62,10 +65,9 @@ const LoansPage = () => {
     <div className="min-h-screen py-20">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-16 text-center animate-fade-in">
-          <h1 className="mb-4 text-5xl font-bold text-primary">Loan Services</h1>
+          <h1 className="mb-4 text-5xl font-bold text-primary">{t('loans.title')}</h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-            Empowering your dreams with trusted, transparent, and flexible loan
-            solutions
+            {t('loans.description')}
           </p>
         </div>
 
@@ -150,7 +152,7 @@ const LoansPage = () => {
               </p>
               <Link href="/contact">
                 <Button className="bg-accent text-accent-foreground hover:bg-accent/90 cursor-pointer" size="lg">
-                  Get in Touch
+                  {t('common.contactUs')}
                 </Button>
               </Link>
             </CardContent>

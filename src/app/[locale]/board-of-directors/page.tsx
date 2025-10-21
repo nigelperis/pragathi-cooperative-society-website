@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { getTranslations } from 'next-intl/server';
 import Image from "next/image";
 import { Phone } from "lucide-react";
 
-const DirectorsPage = () => {
+const DirectorsPage = async () => {
+  const t = await getTranslations();
   const directors = [
     {
       name: "MR. JOSSEY SEQUIERA ",
@@ -59,7 +61,7 @@ const DirectorsPage = () => {
       <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
           <h1 className="mb-4 text-5xl font-bold text-primary">
-            Board of Directors
+            {t('navigation.boardOfDirectors')}
           </h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
             Meet the dedicated leaders guiding our cooperative towards
@@ -95,7 +97,7 @@ const DirectorsPage = () => {
             >
               <CardContent className="p-0 flex flex-col">
                 {/* Large Portrait Photo with Fixed Aspect Ratio */}
-                <div className="relative h-70 w-full bg-white overflow-hidden shrink-0">
+                <div className="relative h-60 md:h-70 w-full bg-white overflow-hidden shrink-0">
                   <Image
                     src={director.image}
                     alt={director.name}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getTranslations } from 'next-intl/server';
 import {
   Briefcase,
   Heart,
@@ -9,7 +10,9 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const CareersPage = () => {
+const CareersPage = async () => {
+  const t = await getTranslations();
+
   const benefits = [
     {
       icon: Heart,

@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 import { Card } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 
 const GalleryPage = () => {
+  const t = useTranslations();
   const galleryRef = useRef<HTMLDivElement>(null);
 
   // Gallery images from public/gallery folder
@@ -94,7 +96,7 @@ const GalleryPage = () => {
       <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
           <h1 className="mb-4 text-5xl font-bold text-primary">
-            Photo Gallery
+            {t('navigation.gallery')}
           </h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
             Capturing moments of service, growth, and community connection

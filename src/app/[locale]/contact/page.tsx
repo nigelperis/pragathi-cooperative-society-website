@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, FormEvent, ChangeEvent } from "react";
+import { useTranslations } from 'next-intl';
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
+  const t = useTranslations();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -36,23 +38,23 @@ const ContactPage = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Head Office Address",
+      title: t('contact.address'),
       content: "Kulshekar, Mangalore - 575016, Karnataka, India",
     },
     {
       icon: Phone,
-      title: "Phone",
+      title: t('contact.phone'),
       content: "+91 824 XXXXXXX",
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t('contact.email'),
       content: "info@pragathicoop.com",
     },
     {
       icon: Clock,
-      title: "Working Hours",
-      content: "Monday - Saturday: 9:00 AM - 5:00 PM",
+      title: t('contact.workingHours'),
+      content: t('contact.mondayToFriday'),
     },
   ];
 
@@ -60,9 +62,9 @@ const ContactPage = () => {
     <div className="min-h-screen py-20">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="mb-16 text-center animate-fade-in">
-          <h1 className="mb-4 text-5xl font-bold text-primary">Get in Touch</h1>
+          <h1 className="mb-4 text-5xl font-bold text-primary">{t('contact.title')}</h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-            We are here to help. Reach out to us for any inquiries or support.
+            {t('contact.description')}
           </p>
         </div>
 
@@ -145,7 +147,7 @@ const ContactPage = () => {
                   size="lg"
                   className="w-full bg-primary hover:bg-primary/90 cursor-pointer"
                 >
-                  Send Message
+                  {t('common.submit')}
                   <Send className="ml-2 h-5 w-5" />
                 </Button>
               </form>

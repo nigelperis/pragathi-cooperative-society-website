@@ -37,12 +37,12 @@ const ContactPage = () => {
     {
       icon: MapPin,
       title: "Head Office Address",
-      content: "Kulshekar, Mangalore - 575016, Karnataka, India",
+      content: `"Lobo Manor", Kalpane, Kulshekar, Mangalore - 575005, Karnataka, India`,
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 87623 08427, +91 78994 70176",
+      content: "+91 8762308427, +91 7899470176",
     },
     {
       icon: Mail,
@@ -52,7 +52,8 @@ const ContactPage = () => {
     {
       icon: Clock,
       title: "Working Hours",
-      content: "Monday - Saturday: 9:00 AM - 5:00 PM",
+      content:
+        "Monday - Friday: 9:00 AM - 5:00 PM (1:30 PM - 2:00 PM Lunch Time), Saturday: 9:00 AM - 1:00 PM",
     },
   ];
 
@@ -162,8 +163,8 @@ const ContactPage = () => {
                 <div className="space-y-6">
                   {contactInfo.map((info) => (
                     <div key={info.title} className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-foreground/10">
-                        <info.icon className="h-6 w-6 text-primary-foreground" />
+                      <div className="flex h-15 w-15 shrink-0 items-center justify-center rounded-lg bg-primary-foreground/10">
+                        <info.icon className="h-7 w-7 text-primary-foreground" />
                       </div>
                       <div>
                         <h3 className="mb-1 font-semibold">{info.title}</h3>

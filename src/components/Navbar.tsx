@@ -73,21 +73,23 @@ const Navbar = () => {
           <div className="flex justify-center py-6">
             <Link href="/" className="group flex items-center">
               <div className="relative mr-2">
-                <div className="flex h-18 w-18 items-center justify-center rounded-full">
+                <div className="flex h-30 w-30 items-center justify-center rounded-full">
                   <Image
                     src="/pragathi_logo.png"
                     alt="Pragathi Co-operative Society Emblem"
                     width={72}
                     height={72}
-                    className="h-18 w-18 rounded-full object-cover"
+                    className="h-30 w-30 rounded-full object-cover"
                     priority
                   />
                 </div>
               </div>
-              <div>
+              <div className="text-center leading-relaxed">
                 <h1 className="text-lg md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide">
                   PRAGATHI CO-OPERATIVE SOCIETY LTD.
                 </h1>
+                <h2 className="mt-1">L. NO. 400</h2>
+                <p>HO: Lobo Manor, Kalpane, Kulshekar, Mangalore - 575005</p>
               </div>
             </Link>
           </div>

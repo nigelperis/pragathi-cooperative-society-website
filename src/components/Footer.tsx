@@ -112,15 +112,15 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-2">
               <MapPin className="mt-1 h-4 w-4 shrink-0" />
-              <span>Kulshekar, Mangalore</span>
+              <span>Lobo Manor, Kalpane, Kulshekar, Mangalore</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 shrink-0" />
-              <span>+91 87623 08427, +91 78994 70176</span>
+              <span>+91 8762308427, +91 7899470176</span>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 shrink-0" />
-              <span>info@pragathicoop.com</span>
+              <span>pragathikulshekar@gmail.com</span>
             </li>
           </ul>
         </div>
@@ -226,15 +226,15 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-1 h-4 w-4 shrink-0" />
-                <span>Kulshekar, Mangalore</span>
+                <span>Lobo Manor, Kalpane, Kulshekar, Mangalore</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0" />
-                <span>+91 87623 08427, +91 78994 70176</span>
+                <span>+91 8762308427, +91 7899470176</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0" />
-                <span>info@pragathicoop.com</span>
+                <span>pragathikulshekar@gmail.com</span>
               </li>
             </ul>
           </div>

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, FormEvent, ChangeEvent } from "react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
@@ -42,12 +42,12 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 824 XXXXXXX",
+      content: "+91 87623 08427, +91 78994 70176",
     },
     {
       icon: Mail,
       title: "Email",
-      content: "info@pragathicoop.com",
+      content: "pragathikulshekar@gmail.com",
     },
     {
       icon: Clock,
@@ -156,19 +156,44 @@ const ContactPage = () => {
             className="space-y-6 animate-fade-in"
             style={{ animationDelay: "100ms" }}
           >
-            <Card className="shadow-lg bg-gradient-to-br from-primary to-primary/90 text-primary-foreground">
+            <Card className="shadow-lg bg-linear-to-br from-primary to-primary/90 text-primary-foreground">
               <CardContent className="p-8">
                 <h2 className="mb-6 text-2xl font-bold">Contact Information</h2>
                 <div className="space-y-6">
                   {contactInfo.map((info) => (
                     <div key={info.title} className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary-foreground/10">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-foreground/10">
                         <info.icon className="h-6 w-6 text-primary-foreground" />
                       </div>
                       <div>
                         <h3 className="mb-1 font-semibold">{info.title}</h3>
                         <p className="text-primary-foreground/80">
-                          {info.content}
+                          {info.title === "Phone" ? (
+                            <>
+                              {info.content.split(",").map((num, idx) => (
+                                <span key={num.trim()}>
+                                  <a
+                                    href={`tel:${num.trim()}`}
+                                    className="underline transition-colors"
+                                  >
+                                    {num.trim()}
+                                  </a>
+                                  {idx < info.content.split(",").length - 1 && (
+                                    <span className="mx-2">|</span>
+                                  )}
+                                </span>
+                              ))}
+                            </>
+                          ) : info.title === "Email" ? (
+                            <a
+                              href={`mailto:${info.content}`}
+                              className="underline transition-colors"
+                            >
+                              {info.content}
+                            </a>
+                          ) : (
+                            info.content
+                          )}
                         </p>
                       </div>
                     </div>
@@ -178,16 +203,17 @@ const ContactPage = () => {
             </Card>
 
             <Card className="overflow-hidden shadow-lg">
-              <div className="flex h-64 items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10">
-                <div className="text-center">
-                  <MapPin className="mx-auto mb-4 h-12 w-12 text-primary" />
-                  <p className="font-medium text-muted-foreground">
-                    Google Map Location
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Click to view our location
-                  </p>
-                </div>
+              <div className="h-64 w-full">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31193.22740672429!2d74.838479!3d12.877688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35f1e79b6c7b5%3A0x50edb1f5c2e0f!2sKulshekar%2C%20Mangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1708494800000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Pragathi Co-operative Society, Kulshekar Location"
+                />
               </div>
             </Card>
 

@@ -78,7 +78,7 @@ const LoansPage = () => {
             >
               <CardContent className="p-8">
                 <div
-                  className={`mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br ${loan.color} transition-transform group-hover:scale-110`}
+                  className={`mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-linear-to-br ${loan.color} transition-transform group-hover:scale-110`}
                 >
                   <loan.icon className="h-10 w-10 text-primary" />
                 </div>
@@ -94,7 +94,7 @@ const LoansPage = () => {
                 <div className="mb-6 space-y-3">
                   {loan.features.map((feature) => (
                     <div key={feature} className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
+                      <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                       <span className="text-sm text-foreground">{feature}</span>
                     </div>
                   ))}
@@ -111,7 +111,7 @@ const LoansPage = () => {
         </div>
 
         <div className="mx-auto mb-16 max-w-7xl">
-          <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
+          <Card className="border-2 border-primary/20 bg-linear-to-br from-primary/5 to-accent/5">
             <CardContent className="p-8 md:p-12">
               <h2 className="mb-8 text-center text-3xl font-bold text-primary">
                 Why Choose Our Loans?
@@ -124,7 +124,7 @@ const LoansPage = () => {
                     className="flex items-center gap-3 animate-fade-in"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-accent/20">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/20">
                       <CheckCircle className="h-5 w-5 text-accent" />
                     </div>
                     <span className="font-medium text-foreground">

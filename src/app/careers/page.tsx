@@ -78,7 +78,7 @@ const CareersPage = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-8 text-center">
-                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-accent/20">
+                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-linear-to-br from-primary/20 to-accent/20">
                     <benefit.icon className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="mb-3 text-xl font-bold text-primary">
@@ -108,7 +108,7 @@ const CareersPage = () => {
                   <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <div className="flex-1">
                       <div className="flex items-start gap-4">
-                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                           <Briefcase className="h-6 w-6 text-primary" />
                         </div>
                         <div>
@@ -142,7 +142,7 @@ const CareersPage = () => {
         </div>
 
         <div className="mx-auto max-w-3xl">
-          <Card className="bg-gradient-to-br from-primary to-primary/90 text-primary-foreground">
+          <Card className="bg-linear-to-br from-primary to-primary/90 text-primary-foreground">
             <CardContent className="p-8 text-center md:p-12">
               <h2 className="mb-4 text-3xl font-bold">Don&apos;t See the Right Fit?</h2>
               <p className="mb-6 text-lg leading-relaxed text-primary-foreground/90">
@@ -160,7 +160,7 @@ const CareersPage = () => {
         </div>
 
         <div className="mx-auto mt-16 max-w-7xl">
-          <Card className="border-2 border-primary/20 bg-gradient-to-br from-accent/5 to-primary/5">
+          <Card className="border-2 border-primary/20 bg-linear-to-br from-accent/5 to-primary/5">
             <CardContent className="p-8">
               <h3 className="mb-6 text-center text-2xl font-bold text-primary">
                 What We Value

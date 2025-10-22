@@ -19,7 +19,7 @@ const Footer = () => {
               className="h-16 w-16"
             />
             <div className="text-lg font-bold">
-              Pragathi Co-operative Society
+              Pragathi Co-operative Society Ltd.
             </div>
           </div>
           <p className="text-sm leading-relaxed text-primary-foreground/80">
@@ -137,7 +137,7 @@ const Footer = () => {
                 className="h-16 w-16"
               />
               <div className="text-lg font-bold">
-                Pragathi Co-operative Society
+                Pragathi Co-operative Society Ltd.
               </div>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/80">
@@ -242,7 +242,7 @@ const Footer = () => {
 
         <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/60">
           <p>
-            &copy; {currentYear} Pragathi Co-operative Society. All rights
+            &copy; {currentYear} Pragathi Co-operative Society Ltd. All rights
             reserved.
           </p>
         </div>

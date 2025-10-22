@@ -13,13 +13,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Pragathi Co-operative Society",
+  title: "Pragathi Co-operative Society Ltd.",
   description: "Your trusted co-operative partner.",
   alternates: {
     canonical: BASE_URL,
   },
   openGraph: {
-    title: "Pragathi Co-operative Society",
+    title: "Pragathi Co-operative Society Ltd.",
     description: "Your trusted co-operative partner.",
     url: BASE_URL,
     siteName: "Pragathi Co-operative Society",
@@ -30,18 +30,18 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/pragathi-hero.jpg`,
         width: 1200,
         height: 630,
-        alt: "Pragathi Co-operative Society",
+        alt: "Pragathi Co-operative Society Ltd.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pragathi Co-operative Society",
+    title: "Pragathi Co-operative Society Ltd.",
     description: "Your trusted co-operative partner.",
     images: [`${BASE_URL}/pragathi-hero.jpg`],
   },
   keywords: [
-    "Pragathi Co-operative Society",
+    "Pragathi Co-operative Society Ltd.",
     "Co-operative Society Mangalore",
     "Community Empowerment",
     "Sustainable Societies",

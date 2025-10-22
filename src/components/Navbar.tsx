@@ -29,9 +29,9 @@ const Navbar = () => {
     );
   };
 
-  const handleDesktopDropdown = (name: string, action: 'open' | 'close') => {
+  const handleDesktopDropdown = (name: string, action: "open" | "close") => {
     setDesktopDropdowns((prev) => {
-      if (action === 'open') {
+      if (action === "open") {
         return prev.includes(name) ? prev : [...prev, name];
       } else {
         return prev.filter((item) => item !== name);
@@ -86,7 +86,7 @@ const Navbar = () => {
               </div>
               <div>
                 <h1 className="text-lg md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide">
-                  PRAGATHI CO-OPERATIVE SOCIETY
+                  PRAGATHI CO-OPERATIVE SOCIETY LTD.
                 </h1>
               </div>
             </Link>
@@ -96,10 +96,11 @@ const Navbar = () => {
 
       {/* Navigation Bar - Becomes sticky */}
       <nav
-        className={`${isScrolled
+        className={`${
+          isScrolled
             ? "fixed top-0 left-0 right-0 shadow-xl"
             : "relative shadow-lg"
-          } z-50 bg-linear-to-r from-accent via-accent to-accent transition-all duration-300`}
+        } z-50 bg-linear-to-r from-accent via-accent to-accent transition-all duration-300`}
       >
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex items-center h-16 relative">
@@ -118,7 +119,7 @@ const Navbar = () => {
                     />
                   </div>
                   <h2 className="text-accent-foreground font-bold text-sm tracking-wide">
-                    PRAGATHI CO-OPERATIVE SOCIETY
+                    PRAGATHI CO-OPERATIVE SOCIETY LTD.
                   </h2>
                 </Link>
               </div>
@@ -126,16 +127,21 @@ const Navbar = () => {
 
             {/* Desktop Navigation - Shifts right when logo is visible */}
             <div
-              className={`hidden lg:flex items-center w-full transition-all duration-300 ${isScrolled ? "justify-end pr-4" : "justify-center"
-                }`}
+              className={`hidden lg:flex items-center w-full transition-all duration-300 ${
+                isScrolled ? "justify-end pr-4" : "justify-center"
+              }`}
             >
               <div className="flex items-center space-x-1">
                 {navLinks.map((link) => (
                   <div key={link.path} className="relative">
                     {link.hasDropdown ? (
                       <div
-                        onMouseEnter={() => handleDesktopDropdown(link.name, 'open')}
-                        onMouseLeave={() => handleDesktopDropdown(link.name, 'close')}
+                        onMouseEnter={() =>
+                          handleDesktopDropdown(link.name, "open")
+                        }
+                        onMouseLeave={() =>
+                          handleDesktopDropdown(link.name, "close")
+                        }
                       >
                         <div className="px-6 py-3 text-accent-foreground font-bold text-sm uppercase tracking-wide hover:text-primary transition-all duration-200 flex items-center gap-1 rounded-sm border-r border-accent/60 last:border-r-0 cursor-pointer">
                           {link.name}
@@ -153,12 +159,17 @@ const Navbar = () => {
                     {/* Enhanced Dropdown Menus */}
                     {link.name === "About" && (
                       <div
-                        className={`absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-300 z-50 ${desktopDropdowns.includes("About")
+                        className={`absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-300 z-50 ${
+                          desktopDropdowns.includes("About")
                             ? "opacity-100 visible"
                             : "opacity-0 invisible"
-                          }`}
-                        onMouseEnter={() => handleDesktopDropdown("About", 'open')}
-                        onMouseLeave={() => handleDesktopDropdown("About", 'close')}
+                        }`}
+                        onMouseEnter={() =>
+                          handleDesktopDropdown("About", "open")
+                        }
+                        onMouseLeave={() =>
+                          handleDesktopDropdown("About", "close")
+                        }
                       >
                         <div>
                           {aboutDropdown.map((item) => (
@@ -221,7 +232,7 @@ const Navbar = () => {
                     />
                   </div>
                   <h2 className="text-accent-foreground font-bold text-sm tracking-wide">
-                    PRAGATHI CO-OPERATIVE SOCIETY
+                    PRAGATHI CO-OPERATIVE SOCIETY LTD.
                   </h2>
                 </Link>
               )}
@@ -256,8 +267,9 @@ const Navbar = () => {
                     >
                       <span className="text-lg">{link.name}</span>
                       <ChevronDown
-                        className={`h-5 w-5 text-gray-600 transition-transform duration-200 ${openDropdowns.includes(link.name) ? "rotate-180" : ""
-                          }`}
+                        className={`h-5 w-5 text-gray-600 transition-transform duration-200 ${
+                          openDropdowns.includes(link.name) ? "rotate-180" : ""
+                        }`}
                       />
                     </button>
                   ) : (

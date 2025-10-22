@@ -13,7 +13,7 @@ const HistoryPage = () => {
       year: "Earlier",
       title: "Foundation",
       description:
-        "Pragathi Co-operative Society was established in Kulshekar with a vision to serve the local community.",
+        "Pragathi Co-operative Society Ltd. was established in Kulshekar with a vision to serve the local community.",
     },
   ];
 
@@ -68,7 +68,7 @@ const HistoryPage = () => {
             <CardContent className="p-4 md:p-8">
               <div className="mb-6 text-center">
                 <h3 className="mb-2 text-xl font-bold text-primary md:text-2xl">
-                  PRAGATHI CO-OPERATIVE SOCIETY
+                  PRAGATHI CO-OPERATIVE SOCIETY LTD.
                 </h3>
                 <p className="text-base text-muted-foreground md:text-lg">
                   L.NO-400, KULSHEKAR, MANGALORE

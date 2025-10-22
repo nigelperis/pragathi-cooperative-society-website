@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Card } from "@/components/ui/card";
+import { Card } from "~/components/ui/card";
 import { useEffect, useRef } from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";

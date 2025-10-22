@@ -23,8 +23,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="text-sm leading-relaxed text-primary-foreground/80">
-            Serving the community since years, empowering lives through
-            trusted financial services and support.
+            Your trusted co-operative partner.
           </p>
         </div>
 
@@ -142,8 +141,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/80">
-              Serving the community since years, empowering lives through
-              trusted financial services and support.
+              Your trusted co-operative partner.
             </p>
           </div>
 

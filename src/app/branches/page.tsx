@@ -1,43 +1,43 @@
 import Image from "next/image";
 import { MapPin, Clock, Phone } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import branchPhoto from "@/assets/branch-photo.jpg";
+import { Card, CardContent } from "~/components/ui/card";
+import branchPhoto from "~/assets/branch-photo.jpg";
 
 const BranchesPage = () => {
   const branches = [
     {
-      name: "Kulshekar (Head Office)",
+      name: "Kulshekar",
       address: "Lobo Myanar, Kalpane Kulshekar, Mangalore - 575005",
       phone: "+91 87623 08427, +91 78994 70176",
       isHeadOffice: true,
     },
     {
       name: "Neermarga Branch",
-      address: "Fernandes Tower, Neermarga Village, Mangalore – 575029",
+      address: "Fernandes Tower, Neermarga Village, Mangalore - 575029",
       phone: "+91 78990 70174",
     },
     {
       name: "Gurupura Kaikamba Branch",
       address:
-        "Vijeth Complex, 6-129/1A, Gurupura Kaikamba, Kinnikambla Post, Mangalore – 574145",
+        "Vijeth Complex, 6-129/1A, Gurupura Kaikamba, Kinnikambla Post, Mangalore - 574145",
       phone: "+91 72595 07173",
     },
     {
       name: "Vamanjoor Branch",
       address:
-        "Amrutheshwara Building, 3-713-3-71/11, Thiruvail, Vamanjoor Post, Mangalore – 575028",
+        "Amrutheshwara Building, 3-713-3-71/11, Thiruvail, Vamanjoor Post, Mangalore - 575028",
       phone: "+91 78998 70175",
     },
     {
       name: "Padil Branch",
       address:
-        "Sanjeev Poojary Compound, Bajal Darbar Hill, Alape, Padil, Mangalore – 575016",
+        "Sanjeev Poojary Compound, Bajal Darbar Hill, Alape, Padil, Mangalore - 575016",
       phone: "+91 76249 70172",
     },
     {
       name: "Shaktinagar Branch",
       address:
-        "Bastikar Complex, Near Corporation Bank, Shaktinagar, Mangalore – 575016",
+        "Bastikar Complex, Near Corporation Bank, Shaktinagar, Mangalore - 575016",
       phone: "+91 88677 70179",
     },
     {
@@ -74,10 +74,11 @@ const BranchesPage = () => {
           {branches.map((branch, index) => (
             <Card
               key={branch.name}
-              className={`group animate-fade-in transition-all duration-300 hover:shadow-lg ${branch.isHeadOffice
-                  ? "border-2 border-accent bg-gradient-to-br from-accent/5 to-accent/10"
+              className={`group animate-fade-in transition-all duration-300 hover:shadow-lg ${
+                branch.isHeadOffice
+                  ? "border-2 border-accent bg-linear-to-br from-accent/5 to-accent/10"
                   : ""
-                }`}
+              }`}
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <CardContent className="p-6">
@@ -93,12 +94,12 @@ const BranchesPage = () => {
 
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
+                    <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                     <p className="text-sm text-foreground">{branch.address}</p>
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
+                    <Phone className="h-5 w-5 shrink-0 text-primary" />
                     <p className="text-sm text-foreground">{branch.phone}</p>
                   </div>
                 </div>

@@ -2,11 +2,11 @@
 
 import { useState, FormEvent, ChangeEvent } from "react";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { Card, CardContent } from "~/components/ui/card";
+import { Button } from "~/components/ui/button";
+import { Input } from "~/components/ui/input";
+import { Textarea } from "~/components/ui/textarea";
+import { useToast } from "~/hooks/use-toast";
 
 const ContactPage = () => {
   const { toast } = useToast();

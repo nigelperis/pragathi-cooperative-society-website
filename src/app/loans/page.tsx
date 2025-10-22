@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Home, Car, Gem, CheckCircle } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "~/components/ui/card";
+import { Button } from "~/components/ui/button";
 
 const LoansPage = () => {
   const loans = [

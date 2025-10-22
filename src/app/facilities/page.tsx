@@ -7,7 +7,7 @@ import {
   Coins,
   CheckCircle,
 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "~/components/ui/card";
 
 const FacilitiesPage = () => {
   const facilities = [

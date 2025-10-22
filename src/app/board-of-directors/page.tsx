@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "~/components/ui/card";
 import Image from "next/image";
 import { Phone } from "lucide-react";
 
@@ -47,12 +47,6 @@ const DirectorsPage = () => {
       image: "/bod/benet-dsilva.jpg",
     },
     {
-      name: "MR. FRANCIS PRAVEEN CRASTA",
-      position: "CEO",
-      mobile: "8197827858",
-      image: "/bod/francis-crasta.jpg",
-    },
-    {
       name: "MRS. ALICE LOBO",
       position: "Director",
       mobile: "9343766086",
@@ -75,6 +69,12 @@ const DirectorsPage = () => {
       position: "Director",
       mobile: "9448857337",
       image: "/bod/noel-dsouza.jpg",
+    },
+    {
+      name: "MR. FRANCIS PRAVEEN CRASTA",
+      position: "CEO",
+      mobile: "8197827858",
+      image: "/bod/francis-crasta.jpg",
     },
   ];
 

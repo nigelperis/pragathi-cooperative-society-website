@@ -206,9 +206,9 @@ const ContactPage = () => {
             <Card className="overflow-hidden shadow-lg">
               <div className="h-64 w-full">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31193.22740672429!2d74.838479!3d12.877688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35f1e79b6c7b5%3A0x50edb1f5c2e0f!2sKulshekar%2C%20Mangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1708494800000!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3889.363832760679!2d74.8754234750749!3d12.884310687423136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDUzJzAzLjUiTiA3NMKwNTInNDAuOCJF!5e0!3m2!1sen!2sin!4v1761201916439!5m2!1sen!2sin"
+                  width="600"
+                  height="450"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"

@@ -47,6 +47,12 @@ const DirectorsPage = () => {
       image: "/bod/benet-dsilva.jpg",
     },
     {
+      name: "MR. NOEL JOSEPH DSOUZA",
+      position: "Director",
+      mobile: "9448857337",
+      image: "/bod/noel-dsouza.jpg",
+    },
+    {
       name: "MRS. ALICE LOBO",
       position: "Director",
       mobile: "9343766086",
@@ -63,12 +69,6 @@ const DirectorsPage = () => {
       position: "Director",
       mobile: "9343560592",
       image: "/bod/dony-dcunha.jpg",
-    },
-    {
-      name: "MR. NOEL JOSEPH DSOUZA",
-      position: "Director",
-      mobile: "9448857337",
-      image: "/bod/noel-dsouza.jpg",
     },
     {
       name: "MR. KIRAN CASTELINO",

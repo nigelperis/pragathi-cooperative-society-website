@@ -16,9 +16,9 @@ const HomePage = () => {
   const services = [
     {
       icon: PiggyBank,
-      title: "Savings & Deposits",
+      title: "Pragathi Share Certificates",
       description:
-        "Secure your future with our trusted savings accounts and fixed deposit schemes.",
+        "Invest smartly with us and enjoy dividends of up to 18%! Each share is valued at just ₹100, making it an accessible and rewarding opportunity. With safe investments and transparent terms, your trust and growth are always our priority.",
       link: "/facilities",
     },
     {
@@ -38,9 +38,9 @@ const HomePage = () => {
   ];
 
   const stats = [
-    { icon: Users, value: "10,000+", label: "Happy Members" },
+    { icon: Users, value: "5,000+", label: "Happy Members" },
     { icon: Building2, value: "7", label: "Branches" },
-    { icon: Heart, value: "10+", label: "Years of Service" },
+    { icon: Heart, value: "35", label: "Years of Service" },
     { icon: TrendingUp, value: "100%", label: "Trust & Growth" },
   ];
 
@@ -115,7 +115,7 @@ const HomePage = () => {
         <div className="container mx-auto max-w-7xl px-4">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-bold text-primary">
-              Our Services
+              Our Facilities and Schemes
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
               Comprehensive financial solutions designed with your needs in mind

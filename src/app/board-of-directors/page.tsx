@@ -5,10 +5,10 @@ import { Phone } from "lucide-react";
 const DirectorsPage = () => {
   const directors = [
     {
-      name: "MR. JOSSEY SEQUIERA ",
+      name: "MR. JOSSY SEQUIERA ",
       position: "President",
       mobile: "9343342012",
-      image: "/bod/jossey-sequiera.jpg",
+      image: "/bod/jossy-sequiera.jpg",
     },
     {
       name: "MR. ROBERT LANCY PAIS",
@@ -69,6 +69,12 @@ const DirectorsPage = () => {
       position: "Director",
       mobile: "9448857337",
       image: "/bod/noel-dsouza.jpg",
+    },
+    {
+      name: "MR. KIRAN CASTELINO",
+      position: "Director",
+      mobile: "9343665598",
+      image: "/bod/kiran-castelino.jpg",
     },
     {
       name: "MR. FRANCIS PRAVEEN CRASTA",

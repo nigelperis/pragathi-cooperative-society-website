@@ -75,7 +75,7 @@ const Navbar = () => {
               <div className="relative mr-2">
                 <div className="flex h-30 w-30 items-center justify-center rounded-full">
                   <Image
-                    src="/pragathi_logo.png"
+                    src="/pragathi-logo.png"
                     alt="Pragathi Co-operative Society Emblem"
                     width={72}
                     height={72}
@@ -112,7 +112,7 @@ const Navbar = () => {
                 <Link href="/" className="flex items-center group">
                   <div className="relative mr-3">
                     <Image
-                      src="/pragathi_logo.png"
+                      src="/pragathi-logo.png"
                       alt="Pragathi Co-operative Society Emblem"
                       width={40}
                       height={40}
@@ -225,7 +225,7 @@ const Navbar = () => {
                 <Link href="/" className="flex items-center">
                   <div className="relative mr-2">
                     <Image
-                      src="/pragathi_logo.png"
+                      src="/pragathi-logo.png"
                       alt="Pragathi Co-operative Society Emblem"
                       width={32}
                       height={32}

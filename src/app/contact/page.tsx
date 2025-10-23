@@ -53,7 +53,7 @@ const ContactPage = () => {
       icon: Clock,
       title: "Working Hours",
       content:
-        "Monday - Friday: 9:00 AM - 5:00 PM (1:30 PM - 2:00 PM Lunch Time), Saturday: 9:00 AM - 1:00 PM",
+        "Monday-Friday: 9:00 AM - 5:00 PM (Lunch Break: 1:00 PM - 2:00 PM) Saturday: 9:00 AM - 1:00 PM",
     },
   ];
 

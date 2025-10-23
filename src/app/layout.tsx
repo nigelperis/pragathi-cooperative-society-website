@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import Navbar from "~/components/Navbar";
-import Footer from "~/components/Footer";
 import "./globals.css";
 import { BASE_URL } from "~/constants/config";
 import GoogleAnalyticsScript from "~/components/GoogleAnalyticsScript";
 import MicrosoftClarity from "~/components/MicrosoftClarity";
+
+import { NextIntlClientProvider } from "next-intl";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -61,11 +61,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <body className={montserrat.className}>
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </div>
+      <NextIntlClientProvider>{children}</NextIntlClientProvider>
     </body>
     <GoogleAnalyticsScript />
     <MicrosoftClarity />

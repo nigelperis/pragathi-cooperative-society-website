@@ -9,10 +9,14 @@ import {
   CreditCard,
   Vault,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
+
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
 
 const HomePage = () => {
+  const t = useTranslations("HomePage");
+
   const services = [
     {
       icon: PiggyBank,
@@ -58,10 +62,10 @@ const HomePage = () => {
         <div className="container relative z-10 mx-auto max-w-7xl px-4">
           <div className="max-w-2xl animate-fade-in text-primary-foreground">
             <h1 className="mb-6 text-4xl font-bold leading-tight md:text-7xl">
-              Trust. Invest. Prosper.
+              {t("title")}
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-primary-foreground/90">
-              Your trusted co-operative partner.
+              {t("subtitle")}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">

@@ -78,12 +78,14 @@ const Navbar = () => {
               <div className="relative mr-2">
                 <div className="flex h-30 w-30 items-center justify-center rounded-full">
                   <Image
-                    src="/pragathi-logo.png"
+                    src="/pragathi-logo.webp"
                     alt="Pragathi Co-operative Society Emblem"
-                    width={200}
-                    height={200}
+                    width={240}
+                    height={240}
                     className="h-30 w-30 rounded-full object-cover"
                     priority
+                    quality={100}
+                    sizes="(max-width: 768px) 120px, 120px"
                   />
                 </div>
               </div>
@@ -122,12 +124,14 @@ const Navbar = () => {
               <div className="hidden lg:flex items-center absolute left-0 z-10 max-w-44">
                 <Link href="/" className="flex items-center group">
                   <Image
-                    src="/pragathi-logo.png"
+                    src="/pragathi-logo.webp"
                     alt="Pragathi Logo"
-                    width={100}
-                    height={100}
+                    width={112}
+                    height={112}
                     className="h-14 w-14 rounded-full object-cover mr-2 flex-shrink-0"
                     priority
+                    quality={100}
+                    sizes="56px"
                   />
                 </Link>
               </div>
@@ -201,12 +205,14 @@ const Navbar = () => {
               {isScrolled && (
                 <Link href="/" className="flex items-center max-w-65">
                   <Image
-                    src="/pragathi-logo.png"
+                    src="/pragathi-logo.webp"
                     alt="Pragathi Logo"
-                    width={100}
-                    height={100}
+                    width={112}
+                    height={112}
                     className="h-14 w-14 rounded-full object-cover mr-2 flex-shrink-0"
                     priority
+                    quality={100}
+                    sizes="56px"
                   />
                 </Link>
               )}

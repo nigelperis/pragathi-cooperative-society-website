@@ -140,6 +140,21 @@
     backface-visibility: hidden;
     transform: translateZ(0);
   }
+
+  /* Ensure images stay crisp at all zoom levels */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+  }
+
+  /* Specifically for logo images - use high quality rendering */
+  img[alt*="Logo"], img[alt*="logo"] {
+    image-rendering: auto;
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
 }
 /* Masonry Gallery Styles */
 .masonry-sizer {

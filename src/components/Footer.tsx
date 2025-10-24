@@ -15,10 +15,12 @@ export default function Footer() {
           <Link href="/" className="mb-4 flex items-center gap-2">
             <Image
               src="/pragathi-logo.webp"
-              alt="Pragathi LogoF"
-              width={60}
-              height={60}
+              alt="Pragathi Logo"
+              width={128}
+              height={128}
               className="h-16 w-16"
+              quality={100}
+              sizes="64px"
             />
             <div className="text-lg font-bold">{t("companyName")}</div>
           </Link>
@@ -125,9 +127,11 @@ export default function Footer() {
               <Image
                 src="/pragathi-logo.webp"
                 alt="Pragathi Logo"
-                width={60}
-                height={60}
+                width={128}
+                height={128}
                 className="h-16 w-16"
+                quality={100}
+                sizes="64px"
               />
               <div className="text-lg font-bold">{t("companyName")}</div>
             </Link>

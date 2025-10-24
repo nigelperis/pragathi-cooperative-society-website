@@ -5,8 +5,10 @@ import { Card } from "~/components/ui/card";
 import { useEffect, useRef } from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
+import { useTranslations } from "next-intl";
 
 const GalleryPage = () => {
+  const t = useTranslations("Gallery");
   const galleryRef = useRef<HTMLDivElement>(null);
 
   // Gallery images from public/gallery folder
@@ -93,11 +95,9 @@ const GalleryPage = () => {
     <div className="min-h-screen py-20">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="animate-fade-in text-center">
-          <h1 className="mb-4 text-5xl font-bold text-primary">
-            Photo Gallery
-          </h1>
+          <h1 className="mb-4 text-5xl font-bold text-primary">{t("title")}</h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-            Capturing moments of service, growth, and community connection
+            {t("subtitle")}
           </p>
         </div>
 

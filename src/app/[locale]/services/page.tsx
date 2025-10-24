@@ -1,15 +1,19 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function ServicesPage() {
+  const t = useTranslations("Services");
+
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen py-14">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="max-w-4xl mx-auto">
-
           <div className="animate-fade-in text-center">
-            <h1 className="mb-4 text-5xl font-bold text-primary">Our Services</h1>
-            <p className="mx-auto mb-16 max-w-3xl text-xl text-muted-foreground">
-              Pragathi Co-operative Society Services
+            <h1 className="mb-4 text-5xl font-bold text-primary">
+              {t("title")}
+            </h1>
+            <p className="mx-auto mb-10 max-w-3xl text-xl text-muted-foreground">
+              {t("subtitle")}
             </p>
           </div>
 

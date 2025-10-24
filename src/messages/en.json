@@ -5,11 +5,6 @@
       "license": "L. NO. 400",
       "address": "HO: Lobo Manor, Kalpane, Kulshekar, Mangalore - 575005"
     },
-    "scrollLogo": {
-      "line1": "PRAGATHI",
-      "line2": "CO-OPERATIVE",
-      "line3": "SOCIETY LTD."
-    },
     "languageSwitcher": {
       "label": "Language",
       "english": "English",
@@ -196,6 +191,63 @@
         "image": "/bod/francis-crasta.jpg"
       }
     ]
+  },
+  "HistoryPage": {
+    "title": "Leadership History",
+    "societyName": "PRAGATHI CO-OPERATIVE SOCIETY LTD.",
+    "societyAddress": "L.NO-400, KULSHEKAR, MANGALORE",
+    "table": {
+      "slNo": "Sl. No.",
+      "tenure": "Tenure",
+      "name": "Name"
+    }
+  },
+  "Services": {
+    "title": "Our Services",
+    "subtitle": "Pragathi Co-operative Society Services"
+  },
+  "Gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Capturing moments of service, growth, and community connection"
+  },
+  "ContactPage": {
+    "pageTitle": "Get in Touch",
+    "pageSubtitle": "We are here to help. Reach out to us for any inquiries or support.",
+    "form": {
+      "sectionTitle": "Send Us a Message",
+      "name": "Full Name *",
+      "namePlaceholder": "Your name",
+      "email": "Email Address *",
+      "emailPlaceholder": "your.email@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+91 XXXXXXXXXX",
+      "message": "Message *",
+      "messagePlaceholder": "How can we help you?",
+      "submitButton": "Send Message",
+      "successToastTitle": "Message Sent!",
+      "successToastDescription": "We will get back to you soon. Thank you for contacting Pragathi Co-operative."
+    },
+    "contactInfo": [
+      {
+        "title": "Head Office Address",
+        "content": "\"Lobo Manor\", Kalpane, Kulshekar, Mangalore - 575005, Karnataka"
+      },
+      {
+        "title": "Phone",
+        "content": "+91 8762308427, +91 7899470176"
+      },
+      {
+        "title": "Email",
+        "content": "pragathikulshekar@gmail.com"
+      },
+      {
+        "title": "Working Hours",
+        "content": "Monday-Friday: 9:00 AM - 5:00 PM (Lunch Break: 1:00 PM - 2:00 PM) Saturday: 9:00 AM - 1:00 PM"
+      }
+    ],
+    "contactSectionTitle": "Contact Information",
+    "visitSectionTitle": "Visit Us",
+    "visitDescription": "Walk into any of our seven branches across Mangalore. Our friendly staff is ready to assist you with all your banking needs. No appointment necessary."
   },
   "Footer": {
     "companyName": "Pragathi Co-operative Society Ltd.",

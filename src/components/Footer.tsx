@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-const Footer = () => {
+export default function Footer() {
   const t = useTranslations("Footer");
   const currentYear = new Date().getFullYear();
 
@@ -12,16 +12,16 @@ const Footer = () => {
       <div className="container mx-auto max-w-7xl px-4 py-12">
         {/* Company info section - full width on mobile */}
         <div className="mb-8 md:hidden">
-          <div className="mb-4 flex items-center gap-2">
+          <Link href="/" className="mb-4 flex items-center gap-2">
             <Image
               src="/pragathi-logo.png"
-              alt="Pragathi LogoF"
+              alt="Pragathi Logo"
               width={60}
               height={60}
               className="h-16 w-16"
             />
             <div className="text-lg font-bold">{t("companyName")}</div>
-          </div>
+          </Link>
           <p className="text-sm leading-relaxed text-primary-foreground/80">
             {t("tagline")}
           </p>
@@ -88,15 +88,32 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-2">
               <MapPin className="mt-1 h-4 w-4" />
-              <span>{t("address")}</span>
+              <a
+                href="https://maps.google.com/?q=Pragathi+Co-operative+Society+Ltd,+Mangalore"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition"
+              >
+                {t("address")}
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <span>{t("phone")}</span>
+              <a
+                href="tel:+918242428422"
+                className="hover:text-accent transition"
+              >
+                {t("phone")}
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
-              <span>{t("email")}</span>
+              <a
+                href="mailto:info@pragathisociety.com"
+                className="hover:text-accent transition"
+              >
+                {t("email")}
+              </a>
             </li>
           </ul>
         </div>
@@ -104,7 +121,7 @@ const Footer = () => {
         {/* Desktop layout */}
         <div className="hidden grid-cols-2 gap-8 md:grid lg:grid-cols-4">
           <div>
-            <div className="mb-4 flex items-center gap-2">
+            <Link href="/" className="mb-4 flex items-center gap-2">
               <Image
                 src="/pragathi-logo.png"
                 alt="Pragathi Logo"
@@ -113,7 +130,7 @@ const Footer = () => {
                 className="h-16 w-16"
               />
               <div className="text-lg font-bold">{t("companyName")}</div>
-            </div>
+            </Link>
             <p className="text-sm leading-relaxed text-primary-foreground/80">
               {t("tagline")}
             </p>
@@ -176,20 +193,46 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-1 h-4 w-4" />
-                <span>{t("address")}</span>
+                <a
+                  href="https://maps.google.com/?q=Pragathi+Co-operative+Society+Ltd,+Mangalore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition"
+                >
+                  {t("address")}
+                </a>
               </li>
+
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>{t("phone")}</span>
+                <div className="flex flex-col">
+                  <a
+                    href="tel:+918762308427"
+                    className="hover:text-accent transition"
+                  >
+                    +91 8762308427
+                  </a>
+                  <a
+                    href="tel:+917899470176"
+                    className="hover:text-accent transition"
+                  >
+                    +91 7899470176
+                  </a>
+                </div>
               </li>
+
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>{t("email")}</span>
+                <a
+                  href="mailto:pragathikulshekar@gmail.com"
+                  className="hover:text-accent transition"
+                >
+                  {t("email")}
+                </a>
               </li>
             </ul>
           </div>
         </div>
-
         <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/60">
           <p>
             &copy; {currentYear} {t("companyName")} {t("rightsReserved")}
@@ -198,6 +241,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

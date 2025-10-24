@@ -88,10 +88,12 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="text-center leading-relaxed">
-                <h1 className="text-base sm:text-lg md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide break-words">
+                <h1 className="text-base sm:text-lg md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide wrap-break-word">
                   {t("header.name")}
                 </h1>
-                <h2 className="mt-1 text-sm sm:text-base">{t("header.license")}</h2>
+                <h2 className="mt-1 text-sm sm:text-base">
+                  {t("header.license")}
+                </h2>
                 <p className="text-sm sm:text-base">{t("header.address")}</p>
               </div>
             </Link>
@@ -101,10 +103,11 @@ const Navbar = () => {
 
       {/* Navigation */}
       <nav
-        className={`${isScrolled
-          ? "fixed top-0 left-0 right-0 shadow-xl"
-          : "relative shadow-lg"
-          } z-50 bg-linear-to-r from-accent via-accent to-accent transition-all duration-300`}
+        className={`${
+          isScrolled
+            ? "fixed top-0 left-0 right-0 shadow-xl"
+            : "relative shadow-lg"
+        } z-50 bg-linear-to-r from-accent via-accent to-accent transition-all duration-300`}
       >
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex items-center h-16 relative">
@@ -117,24 +120,24 @@ const Navbar = () => {
                     alt="Pragathi Logo"
                     width={40}
                     height={40}
-                    className="h-10 w-10 rounded-full object-cover mr-2 flex-shrink-0"
+                    className="h-10 w-10 rounded-full object-cover mr-2 shrink-0"
                     priority
                   />
-                  <div className="text-accent-foreground font-bold text-xs leading-tight tracking-wide">
-                    <div>{t("scrollLogo.line1")}</div>
-                    <div>{t("scrollLogo.line2")}</div>
-                    <div>{t("scrollLogo.line3")}</div>
-                  </div>
                 </Link>
               </div>
             )}
 
             {/* Desktop Navigation */}
             <div
-              className={`hidden lg:flex items-center w-full transition-all duration-300 ${isScrolled ? "justify-center" : "justify-center"
-                }`}
+              className={`hidden lg:flex items-center w-full transition-all duration-300 ${
+                isScrolled ? "justify-center" : "justify-center"
+              }`}
             >
-              <div className={`flex items-center space-x-1 ${isScrolled ? "ml-48" : ""}`}>
+              <div
+                className={`flex items-center space-x-1 ${
+                  isScrolled ? "ml-48" : ""
+                }`}
+              >
                 {navLinks.map((link) => (
                   <div key={link.path} className="relative">
                     {link.hasDropdown ? (
@@ -151,10 +154,11 @@ const Navbar = () => {
                         {/* About Dropdown */}
                         {link.name === t("links.about") && (
                           <div
-                            className={`absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-200 z-50 ${activeDropdown === link.name
-                              ? "opacity-100 visible translate-y-0"
-                              : "opacity-0 invisible -translate-y-2"
-                              }`}
+                            className={`absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-200 z-50 ${
+                              activeDropdown === link.name
+                                ? "opacity-100 visible translate-y-0"
+                                : "opacity-0 invisible -translate-y-2"
+                            }`}
                           >
                             {aboutDropdown.map((item) => (
                               <Link
@@ -195,12 +199,9 @@ const Navbar = () => {
                     alt="Pragathi Logo"
                     width={32}
                     height={32}
-                    className="h-8 w-8 rounded-full object-cover mr-2 flex-shrink-0"
+                    className="h-9 w-9 rounded-full object-cover mr-2 shrink-0"
                     priority
                   />
-                  <div className="text-accent-foreground font-bold text-xs leading-tight tracking-wide">
-                    <div>{t("header.name")}</div>
-                  </div>
                 </Link>
               )}
               <div className="flex items-center space-x-2 ml-auto">
@@ -235,8 +236,9 @@ const Navbar = () => {
                     >
                       <span className="text-lg">{link.name}</span>
                       <ChevronDown
-                        className={`h-5 w-5 text-gray-600 transition-transform duration-200 ${openDropdowns.includes(link.name) ? "rotate-180" : ""
-                          }`}
+                        className={`h-5 w-5 text-gray-600 transition-transform duration-200 ${
+                          openDropdowns.includes(link.name) ? "rotate-180" : ""
+                        }`}
                       />
                     </button>
                   ) : (

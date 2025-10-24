@@ -1,0 +1,125 @@
+{
+  "Navbar": {
+    "header": {
+      "name": "PRAGATHI CO-OPERATIVE SOCIETY LTD.",
+      "license": "L. NO. 400",
+      "address": "HO: Lobo Manor, Kalpane, Kulshekar, Mangalore - 575005"
+    },
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "branches": "Branches",
+      "gallery": "Gallery",
+      "careers": "Careers",
+      "contact": "Contact",
+      "aboutDropdown": {
+        "history": "History",
+        "boardOfDirectors": "Board of Directors"
+      }
+    }
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Trust. Invest. Prosper.",
+      "subtitle": "Your trusted co-operative partner.",
+      "getStarted": "Get Started",
+      "ourStory": "Our Story"
+    },
+    "stats": {
+      "happyMembers": "Happy Members",
+      "branches": "Branches",
+      "yearsOfService": "Years of Service",
+      "trustGrowth": "Trust & Growth"
+    },
+    "services": {
+      "title": "Our Facilities and Schemes",
+      "subtitle": "Comprehensive financial solutions designed with your needs in mind",
+      "learnMore": "Learn More",
+      "items": {
+        "shareCertificates": {
+          "title": "Pragathi Share Certificates",
+          "description": "Invest smartly with us and enjoy dividends of up to 18%! Each share is valued at just ₹100, making it an accessible and rewarding opportunity. With safe investments and transparent terms, your trust and growth are always our priority."
+        },
+        "loans": {
+          "title": "Loan Services",
+          "description": "Property, vehicle, and gold loans with transparent terms and competitive rates."
+        },
+        "schemes": {
+          "title": "Special Schemes",
+          "description": "Pigmy deposits and recurring schemes designed for your convenience."
+        }
+      }
+    },
+    "joinFamily": {
+      "title": "Join Our Growing Family",
+      "subtitle": "Experience the warmth of community banking. Let us help you achieve your financial goals.",
+      "contactUs": "Contact Us Today"
+    }
+  },
+  "Branches": {
+    "title": "Our Branches",
+    "subtitle": "Find us at seven convenient locations across Mangalore, always ready to serve you.",
+    "headOffice": "Head Office",
+    "list": [
+      {
+        "name": "Kulshekar",
+        "address": "Lobo Manor, Kalpane, Kulshekar, Mangalore - 575005",
+        "phone": "8762308427, 7899470176"
+      },
+      {
+        "name": "Neermarga Branch",
+        "address": "Fernandes Tower, Neermarga Village, Mangalore Taluk",
+        "phone": "7899070174"
+      },
+      {
+        "name": "Gurupura Kaikamba Branch",
+        "address": "Vijeth Complex, 6-129/1A, Gurupura Kaikamba, Kinnikambla Post, Mangalore Taluk",
+        "phone": "7259507173"
+      },
+      {
+        "name": "Vamanjoor Branch",
+        "address": "Amrutheshwara Building, 3-71,3-K-71/11, Thiruvail Village, Vamanjoor Post, Mangalore - 575028",
+        "phone": "7899870175"
+      },
+      {
+        "name": "Padil Branch",
+        "address": "Sanjeev Poojary Compound, Bajal Darbar Hill, Alape, Padil, Mangalore - 575007",
+        "phone": "7899870175"
+      },
+      {
+        "name": "Shaktinagar Branch",
+        "address": "Bastikar Complex, Near Corporation Bank, Shaktinagar, Mangalore - 575016",
+        "phone": "7899870175"
+      },
+      {
+        "name": "Ganjimatt Branch",
+        "address": "L. C. Complex, Malali Crossroad, Badagulipady Village, Ganjimutt - 574144",
+        "phone": "8867770177"
+      }
+    ]
+  },
+  "Footer": {
+    "companyName": "Pragathi Co-operative Society Ltd.",
+    "tagline": "Your trusted co-operative partner.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "headOffice": "Head Office",
+    "links": {
+      "history": "Our History",
+      "board": "Board of Directors",
+      "branches": "Branches",
+      "careers": "Careers"
+    },
+    "services": {
+      "savings": "Savings Bank",
+      "deposits": "Fixed Deposits",
+      "propertyLoans": "Property Loans",
+      "vehicleGoldLoans": "Vehicle & Gold Loans"
+    },
+    "address": "Lobo Manor, Kalpane, Kulshekar, Mangalore",
+    "phone": "+91 8762308427, +91 7899470176",
+    "email": "pragathikulshekar@gmail.com",
+    "rightsReserved": "All rights reserved."
+  }
+}

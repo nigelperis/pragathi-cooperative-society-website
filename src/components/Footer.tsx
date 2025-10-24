@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -13,93 +15,67 @@ const Footer = () => {
           <div className="mb-4 flex items-center gap-2">
             <Image
               src="/pragathi-logo.png"
-              alt="Pragathi Logo"
+              alt="Pragathi LogoF"
               width={60}
               height={60}
               className="h-16 w-16"
             />
-            <div className="text-lg font-bold">
-              Pragathi Co-operative Society Ltd.
-            </div>
+            <div className="text-lg font-bold">{t("companyName")}</div>
           </div>
           <p className="text-sm leading-relaxed text-primary-foreground/80">
-            Your trusted co-operative partner.
+            {t("tagline")}
           </p>
         </div>
 
         {/* Mobile: 2 columns for Quick Links and Our Services */}
         <div className="mb-8 grid grid-cols-2 gap-6 md:hidden">
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold">{t("quickLinks")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  href="/history"
-                  className="transition-colors hover:text-accent"
-                >
-                  Our History
+                <Link href="/history" className="hover:text-accent">
+                  {t("links.history")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/board-of-directors"
-                  className="transition-colors hover:text-accent"
-                >
-                  Board of Directors
+                <Link href="/board-of-directors" className="hover:text-accent">
+                  {t("links.board")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/branches"
-                  className="transition-colors hover:text-accent"
-                >
-                  Branches
+                <Link href="/branches" className="hover:text-accent">
+                  {t("links.branches")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/careers"
-                  className="transition-colors hover:text-accent"
-                >
-                  Careers
+                <Link href="/careers" className="hover:text-accent">
+                  {t("links.careers")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Our Services</h3>
+            <h3 className="mb-4 text-lg font-semibold">{t("ourServices")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  href="/facilities"
-                  className="transition-colors hover:text-accent"
-                >
-                  Savings Bank
+                <Link href="/facilities" className="hover:text-accent">
+                  {t("services.savings")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/facilities"
-                  className="transition-colors hover:text-accent"
-                >
-                  Fixed Deposits
+                <Link href="/facilities" className="hover:text-accent">
+                  {t("services.deposits")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/loans"
-                  className="transition-colors hover:text-accent"
-                >
-                  Property Loans
+                <Link href="/loans" className="hover:text-accent">
+                  {t("services.propertyLoans")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/loans"
-                  className="transition-colors hover:text-accent"
-                >
-                  Vehicle & Gold Loans
+                <Link href="/loans" className="hover:text-accent">
+                  {t("services.vehicleGoldLoans")}
                 </Link>
               </li>
             </ul>
@@ -108,24 +84,24 @@ const Footer = () => {
 
         {/* Head Office section - full width on mobile */}
         <div className="md:hidden">
-          <h3 className="mb-4 text-lg font-semibold">Head Office</h3>
+          <h3 className="mb-4 text-lg font-semibold">{t("headOffice")}</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-2">
-              <MapPin className="mt-1 h-4 w-4 shrink-0" />
-              <span>Lobo Manor, Kalpane, Kulshekar, Mangalore</span>
+              <MapPin className="mt-1 h-4 w-4" />
+              <span>{t("address")}</span>
             </li>
             <li className="flex items-center gap-2">
-              <Phone className="h-4 w-4 shrink-0" />
-              <span>+91 8762308427, +91 7899470176</span>
+              <Phone className="h-4 w-4" />
+              <span>{t("phone")}</span>
             </li>
             <li className="flex items-center gap-2">
-              <Mail className="h-4 w-4 shrink-0" />
-              <span>pragathikulshekar@gmail.com</span>
+              <Mail className="h-4 w-4" />
+              <span>{t("email")}</span>
             </li>
           </ul>
         </div>
 
-        {/* Desktop layout - hidden on mobile */}
+        {/* Desktop layout */}
         <div className="hidden grid-cols-2 gap-8 md:grid lg:grid-cols-4">
           <div>
             <div className="mb-4 flex items-center gap-2">
@@ -136,105 +112,79 @@ const Footer = () => {
                 height={60}
                 className="h-16 w-16"
               />
-              <div className="text-lg font-bold">
-                Pragathi Co-operative Society Ltd.
-              </div>
+              <div className="text-lg font-bold">{t("companyName")}</div>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/80">
-              Your trusted co-operative partner.
+              {t("tagline")}
             </p>
           </div>
 
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold">{t("quickLinks")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  href="/history"
-                  className="transition-colors hover:text-accent"
-                >
-                  Our History
+                <Link href="/history" className="hover:text-accent">
+                  {t("links.history")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/board-of-directors"
-                  className="transition-colors hover:text-accent"
-                >
-                  Board of Directors
+                <Link href="/board-of-directors" className="hover:text-accent">
+                  {t("links.board")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/branches"
-                  className="transition-colors hover:text-accent"
-                >
-                  Branches
+                <Link href="/branches" className="hover:text-accent">
+                  {t("links.branches")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/careers"
-                  className="transition-colors hover:text-accent"
-                >
-                  Careers
+                <Link href="/careers" className="hover:text-accent">
+                  {t("links.careers")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Our Services</h3>
+            <h3 className="mb-4 text-lg font-semibold">{t("ourServices")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  href="/facilities"
-                  className="transition-colors hover:text-accent"
-                >
-                  Savings Bank
+                <Link href="/facilities" className="hover:text-accent">
+                  {t("services.savings")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/facilities"
-                  className="transition-colors hover:text-accent"
-                >
-                  Fixed Deposits
+                <Link href="/facilities" className="hover:text-accent">
+                  {t("services.deposits")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/loans"
-                  className="transition-colors hover:text-accent"
-                >
-                  Property Loans
+                <Link href="/loans" className="hover:text-accent">
+                  {t("services.propertyLoans")}
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/loans"
-                  className="transition-colors hover:text-accent"
-                >
-                  Vehicle & Gold Loans
+                <Link href="/loans" className="hover:text-accent">
+                  {t("services.vehicleGoldLoans")}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Head Office</h3>
+            <h3 className="mb-4 text-lg font-semibold">{t("headOffice")}</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
-                <MapPin className="mt-1 h-4 w-4 shrink-0" />
-                <span>Lobo Manor, Kalpane, Kulshekar, Mangalore</span>
+                <MapPin className="mt-1 h-4 w-4" />
+                <span>{t("address")}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0" />
-                <span>+91 8762308427, +91 7899470176</span>
+                <Phone className="h-4 w-4" />
+                <span>{t("phone")}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 shrink-0" />
-                <span>pragathikulshekar@gmail.com</span>
+                <Mail className="h-4 w-4" />
+                <span>{t("email")}</span>
               </li>
             </ul>
           </div>
@@ -242,8 +192,7 @@ const Footer = () => {
 
         <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/60">
           <p>
-            &copy; {currentYear} Pragathi Co-operative Society Ltd. All rights
-            reserved.
+            &copy; {currentYear} {t("companyName")} {t("rightsReserved")}
           </p>
         </div>
       </div>

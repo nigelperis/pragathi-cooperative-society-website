@@ -6,6 +6,15 @@ import type { LocaleParms } from "~/app/[locale]/types";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
 
+import { Montserrat, Noto_Sans_Kannada } from "next/font/google";
+
+// Fonts
+const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
+const notoSans = Noto_Sans_Kannada({
+  subsets: ["kannada"],
+  display: "swap",
+});
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -24,8 +33,10 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
 
+  const fontClass = locale === "kn" ? notoSans.className : montserrat.className;
+
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className={`${fontClass} flex min-h-screen flex-col`}>
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />

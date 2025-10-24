@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
 import { BASE_URL } from "~/constants/config";
 import GoogleAnalyticsScript from "~/components/GoogleAnalyticsScript";
 import MicrosoftClarity from "~/components/MicrosoftClarity";
-
 import { NextIntlClientProvider } from "next-intl";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap",
-});
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Pragathi Co-operative Society Ltd.",
@@ -58,14 +52,18 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="en" translate="no" className="notranslate">
-    <body className={montserrat.className}>
-      <NextIntlClientProvider>{children}</NextIntlClientProvider>
-    </body>
-    <GoogleAnalyticsScript />
-    <MicrosoftClarity />
-  </html>
-);
-
-export default RootLayout;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" translate="no" className="notranslate">
+      <body>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
+      <GoogleAnalyticsScript />
+      <MicrosoftClarity />
+    </html>
+  );
+}

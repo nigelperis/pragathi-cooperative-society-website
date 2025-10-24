@@ -5,6 +5,11 @@
       "license": "ಎಲ್. ನಂ. ೪೦೦",
       "address": "ಪ್ರಧಾನ ಕಛೇರಿ: ಲೋಬೋ ಮ್ಯಾನರ್, ಕಲ್ಪನೆ, ಕುಲಶೇಖರ, ಮಂಗಳೂರು - 575005"
     },
+    "languageSwitcher": {
+      "label": "ಭಾಷೆ",
+      "english": "English",
+      "kannada": "ಕನ್ನಡ"
+    },
     "links": {
       "home": "ಮುಖಪುಟ",
       "about": "ನಮ್ಮ ಬಗ್ಗೆ",
@@ -168,8 +173,8 @@
         "image": "/bod/lilly-dsouza.jpg"
       },
       {
-        "name": "MR. DONY DCUNHA",
-        "position": "Director",
+        "name": "ಶ್ರೀ. ಡೋನಿ ಡಿಕುನ್ಹಾ",
+        "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9343560592",
         "image": "/bod/dony-dcunha.jpg"
       },

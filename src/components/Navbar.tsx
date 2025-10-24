@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
+import LanguageSwitcherDropdown from "./LanguageSwitcherDropdown";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -171,6 +172,11 @@ const Navbar = () => {
                     )}
                   </div>
                 ))}
+
+                {/* Language Switcher for Desktop*/}
+                <div className="ml-4">
+                  <LanguageSwitcherDropdown />
+                </div>
               </div>
             </div>
 
@@ -191,17 +197,21 @@ const Navbar = () => {
                   </h2>
                 </Link>
               )}
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-lg text-accent-foreground hover:bg-white/20 transition-colors cursor-pointer ml-auto"
-                aria-label="Toggle menu"
-              >
-                {isOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
-              </button>
+              <div className="flex items-center space-x-2 ml-auto">
+                {/* Language Switcher for Mobile*/}
+                <LanguageSwitcherDropdown />
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="p-2 rounded-lg text-accent-foreground hover:bg-white/20 transition-colors cursor-pointer"
+                  aria-label="Toggle menu"
+                >
+                  {isOpen ? (
+                    <X className="h-6 w-6" />
+                  ) : (
+                    <Menu className="h-6 w-6" />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>

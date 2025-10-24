@@ -5,6 +5,11 @@
       "license": "L. NO. 400",
       "address": "HO: Lobo Manor, Kalpane, Kulshekar, Mangalore - 575005"
     },
+    "languageSwitcher": {
+      "label": "Language",
+      "english": "English",
+      "kannada": "ಕನ್ನಡ"
+    },
     "links": {
       "home": "Home",
       "about": "About",

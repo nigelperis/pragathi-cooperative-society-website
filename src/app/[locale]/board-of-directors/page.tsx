@@ -1,9 +1,7 @@
-"use client";
-
 import { Card, CardContent } from "~/components/ui/card";
 import Image from "next/image";
 import { Phone } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 type Director = {
   name: string;
@@ -12,8 +10,8 @@ type Director = {
   image: string;
 };
 
-const DirectorsPage = () => {
-  const t = useTranslations("DirectorsPage");
+export default async function DirectorsPage() {
+  const t = await getTranslations("DirectorsPage");
 
   const directors: Director[] = t.raw("directors") as Director[];
 
@@ -86,6 +84,4 @@ const DirectorsPage = () => {
       </div>
     </div>
   );
-};
-
-export default DirectorsPage;
+}

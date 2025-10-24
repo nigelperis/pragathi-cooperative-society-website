@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { MapPin, Phone } from "lucide-react";
 import { Card, CardContent } from "~/components/ui/card";
 import branchPhoto from "~/assets/branch-photo.jpg";
 
-export default function Branches() {
-  const t = useTranslations("Branches");
+export default async function Branches() {
+  const t = await getTranslations("Branches");
   const branches = t.raw("list") as {
     name: string;
     address: string;

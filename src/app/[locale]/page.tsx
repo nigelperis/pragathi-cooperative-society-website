@@ -9,12 +9,12 @@ import {
   CreditCard,
   Vault,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
 
-function HomePage() {
-  const t = useTranslations("HomePage");
+export default async function HomePage() {
+  const t = await getTranslations("HomePage");
 
   const services = [
     {
@@ -180,5 +180,3 @@ function HomePage() {
     </div>
   );
 }
-
-export default HomePage;

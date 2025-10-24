@@ -1,10 +1,13 @@
 import { setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { routing } from "~/i18n/routing";
 import type { LocaleParms } from "~/app/[locale]/types";
 import Navbar from "~/components/Navbar";
 import Footer from "~/components/Footer";
+import Script from "next/script";
 
 import { Montserrat, Noto_Sans_Kannada } from "next/font/google";
 
@@ -33,13 +36,25 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
 
+  const messages = await getMessages();
   const fontClass = locale === "kn" ? notoSans.className : montserrat.className;
 
   return (
-    <div className={`${fontClass} flex min-h-screen flex-col`}>
-      <Navbar />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </div>
+    <>
+      <Script
+        id="set-locale"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang = '${locale}';`,
+        }}
+      />
+      <div className={`${fontClass} flex min-h-screen flex-col`}>
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
+      </div>
+    </>
   );
 }

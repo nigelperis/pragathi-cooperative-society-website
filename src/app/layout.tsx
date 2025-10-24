@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { BASE_URL } from "~/constants/config";
 import GoogleAnalyticsScript from "~/components/GoogleAnalyticsScript";
 import MicrosoftClarity from "~/components/MicrosoftClarity";
-import { NextIntlClientProvider } from "next-intl";
 
 import "./globals.css";
 
@@ -52,18 +51,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  
   return (
-    <html lang="en" translate="no" className="notranslate">
+    <html lang={locale}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        {children}
+        <GoogleAnalyticsScript />
+        <MicrosoftClarity />
       </body>
-      <GoogleAnalyticsScript />
-      <MicrosoftClarity />
     </html>
   );
 }

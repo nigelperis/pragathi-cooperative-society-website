@@ -78,7 +78,7 @@ const Navbar = () => {
               <div className="relative mr-2">
                 <div className="flex h-30 w-30 items-center justify-center rounded-full">
                   <Image
-                    src="/pragathi-logo.webp"
+                    src="/pragathi-logo.svg"
                     alt="Pragathi Co-operative Society Emblem"
                     width={240}
                     height={240}
@@ -124,7 +124,7 @@ const Navbar = () => {
               <div className="hidden lg:flex items-center absolute left-0 z-10 max-w-44">
                 <Link href="/" className="flex items-center group">
                   <Image
-                    src="/pragathi-logo.webp"
+                    src="/pragathi-logo.svg"
                     alt="Pragathi Logo"
                     width={112}
                     height={112}
@@ -205,7 +205,7 @@ const Navbar = () => {
               {isScrolled && (
                 <Link href="/" className="flex items-center max-w-65">
                   <Image
-                    src="/pragathi-logo.webp"
+                    src="/pragathi-logo.svg"
                     alt="Pragathi Logo"
                     width={112}
                     height={112}

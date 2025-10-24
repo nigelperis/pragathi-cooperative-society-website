@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="mb-8 md:hidden">
           <Link href="/" className="mb-4 flex items-center gap-2">
             <Image
-              src="/pragathi-logo.webp"
+              src="/pragathi-logo.svg"
               alt="Pragathi Logo"
               width={128}
               height={128}
@@ -125,7 +125,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="mb-4 flex items-center gap-2">
               <Image
-                src="/pragathi-logo.webp"
+                src="/pragathi-logo.svg"
                 alt="Pragathi Logo"
                 width={128}
                 height={128}

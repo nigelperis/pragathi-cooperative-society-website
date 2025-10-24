@@ -1,7 +1,7 @@
 {
   "Navbar": {
     "header": {
-      "name": "ಪ್ರಗತಿ ಸಹಕಾರ ಸಂಘ ನಿಯಮಿತ.",
+      "name": "ಪ್ರಗತಿ ಸಹಕಾರ ಸಂಘ ನಿಯಮಿತ",
       "license": "ಎಲ್. ನಂ. ೪೦೦",
       "address": "ಪ್ರಧಾನ ಕಛೇರಿ: ಲೋಬೋ ಮ್ಯಾನರ್, ಕಲ್ಪನೆ, ಕುಲಶೇಖರ, ಮಂಗಳೂರು - 575005"
     },
@@ -52,8 +52,8 @@
       }
     },
     "joinFamily": {
-      "title": "ನಮ್ಮ ವೃದ್ಧಿಸುತ್ತಿರುವ ಕುಟುಂಬದಲ್ಲಿ ಸೇರಿ",
-      "subtitle": "ಸಮುದಾಯ ಬ್ಯಾಂಕಿಂಗ್‌ನ ಉಷ್ಣತೆಯನ್ನು ಅನುಭವಿಸಿ. ನಿಮ್ಮ ಹಣಕಾಸಿನ ಗುರಿಗಳನ್ನು ಸಾಧಿಸಲು ನಾವು ಸಹಾಯ ಮಾಡೋಣ.",
+      "title": "ನಮ್ಮ ಬೆಳೆಯುತ್ತಿರುವ ಕುಟುಂಬವನ್ನು ಸೇರಿ",
+      "subtitle": "ನಿಮ್ಮ ಹಣಕಾಸನ್ನು ಸುಲಭವಾಗಿ ಮತ್ತು ವಿಶ್ವಾಸದಿಂದ ನಿರ್ವಹಿಸಿ.",
       "contactUs": "ಇಂದು ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ"
     }
   },
@@ -99,8 +99,96 @@
       }
     ]
   },
+  "DirectorsPage": {
+    "title": "ನಿರ್ದೇಶಕರ ಮಂಡಳಿ",
+    "subtitle": "ಶ್ರೇಷ್ಠತೆ ಮತ್ತು ಸಮುದಾಯ ಸೇವೆಯತ್ತ ನಮ್ಮ ಸಹಕಾರಕ್ಕೆ ಮಾರ್ಗದರ್ಶನ ನೀಡುವ ಸಮರ್ಪಿತ ನಾಯಕರನ್ನು ಭೇಟಿ ಮಾಡಿ.",
+    "leadershipMessage": {
+      "title": "ನಮ್ಮ ನಾಯಕತ್ವದಿಂದ ಒಂದು ಸಂದೇಶ",
+      "content": "ಪ್ರಗತಿ ಸಹಕಾರ ಸಂಘದಲ್ಲಿ, ನಿಜವಾದ ಯಶಸ್ಸನ್ನು ಕೇವಲ ಸಂಖ್ಯೆಯಲ್ಲಿ ಅಳೆಯಲಾಗುವುದಿಲ್ಲ, ಬದಲಾಗಿ ನಾವು ಸ್ಪರ್ಶಿಸುವ ಜೀವನ ಮತ್ತು ನಾವು ನನಸಾಗಿಸಲು ಸಹಾಯ ಮಾಡುವ ಕನಸುಗಳಲ್ಲಿ ಅಳೆಯಲಾಗುತ್ತದೆ ಎಂದು ನಾವು ನಂಬುತ್ತೇವೆ. ನಮ್ಮ ಮಂಡಳಿಯು ಪಾರದರ್ಶಕತೆ, ಸಮಗ್ರತೆ ಮತ್ತು ಸೇವೆಯ ಅತ್ಯುನ್ನತ ಮಾನದಂಡಗಳನ್ನು ಎತ್ತಿಹಿಡಿಯಲು ಬದ್ಧವಾಗಿದೆ. ನಮ್ಮ ಸಮುದಾಯದ ಪ್ರತಿಯೊಬ್ಬ ಸದಸ್ಯರಿಗೂ ನ್ಯಾಯಯುತ, ವಿಶ್ವಾಸಾರ್ಹ ಮತ್ತು ಸಹಾನುಭೂತಿಯ ಆರ್ಥಿಕ ಬೆಂಬಲ ದೊರೆಯುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ನಾವು ಒಟ್ಟಾಗಿ ಕೆಲಸ ಮಾಡುತ್ತೇವೆ."
+    },
+    "directors": [
+      {
+        "name": "ಶ್ರೀ. ಜೊಸ್ಸಿ ಸಿಕ್ವೇರಾ",
+        "position": "ಅಧ್ಯಕ್ಷ",
+        "mobile": "9343342012",
+        "image": "/bod/jossy-sequiera.jpg"
+      },
+      {
+        "name": "MR. ROBERT LANCY PAIS",
+        "position": "Vice President",
+        "mobile": "9845184284",
+        "image": "/bod/robert-pais.jpg"
+      },
+      {
+        "position": "Director",
+        "mobile": "9448300593",
+        "image": "/bod/romans-lobo.jpg",
+        "name": "MR. ROMANS BASIL LOBO"
+      },
+      {
+        "name": "MR. JOCKIEM STANY ALVARES",
+        "position": "Director",
+        "mobile": "9845044983",
+        "image": "/bod/jockiem-alvares.jpg"
+      },
+      {
+        "name": "MR. NAVEEN NELSON PINTO",
+        "position": "Director",
+        "mobile": "9740200777",
+        "image": "/bod/naveen-pinto.png"
+      },
+      {
+        "name": "MR. ROHAN JOHN DSILVA",
+        "position": "Director",
+        "mobile": "9900814746",
+        "image": "/bod/rohan-dsilva.png"
+      },
+      {
+        "name": "MR. BENET DSILVA",
+        "position": "Director",
+        "mobile": "9845170171",
+        "image": "/bod/benet-dsilva.jpg"
+      },
+      {
+        "name": "MR. NOEL JOSEPH DSOUZA",
+        "position": "Director",
+        "mobile": "9448857337",
+        "image": "/bod/noel-dsouza.jpg"
+      },
+      {
+        "name": "MRS. ALICE LOBO",
+        "position": "Director",
+        "mobile": "9343766086",
+        "image": "/bod/alice-lobo.jpg"
+      },
+      {
+        "name": "MRS. LILLY DSOUZA",
+        "position": "Director",
+        "mobile": "9880076962",
+        "image": "/bod/lilly-dsouza.jpg"
+      },
+      {
+        "name": "MR. DONY DCUNHA",
+        "position": "Director",
+        "mobile": "9343560592",
+        "image": "/bod/dony-dcunha.jpg"
+      },
+      {
+        "name": "MR. KIRAN CASTELINO",
+        "position": "Director",
+        "mobile": "9343665598",
+        "image": "/bod/kiran-castelino.jpg"
+      },
+      {
+        "name": "MR. FRANCIS PRAVEEN CRASTA",
+        "position": "CEO",
+        "mobile": "8197827858",
+        "image": "/bod/francis-crasta.jpg"
+      }
+    ]
+  },
   "Footer": {
-    "companyName": "ಪ್ರಗತಿ ಸಹಕಾರ ಸಂಘ ನಿಯಮಿತ.",
+    "companyName": "ಪ್ರಗತಿ ಸಹಕಾರ ಸಂಘ ನಿಯಮಿತ",
     "tagline": "ನಿಮ್ಮ ವಿಶ್ವಾಸಾರ್ಹ ಸಹಕಾರಿ ಪಾಲುದಾರ.",
     "quickLinks": "ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು",
     "ourServices": "ನಮ್ಮ ಸೇವೆಗಳು",

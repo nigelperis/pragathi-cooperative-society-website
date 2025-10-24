@@ -53,7 +53,7 @@
     },
     "joinFamily": {
       "title": "Join Our Growing Family",
-      "subtitle": "Experience the warmth of community banking. Let us help you achieve your financial goals.",
+      "subtitle": "Manage your finances with ease and confidence.",
       "contactUs": "Contact Us Today"
     }
   },
@@ -96,6 +96,94 @@
         "name": "Ganjimatt Branch",
         "address": "L. C. Complex, Malali Crossroad, Badagulipady Village, Ganjimutt - 574144",
         "phone": "8867770177"
+      }
+    ]
+  },
+  "DirectorsPage": {
+    "title": "Board of Directors",
+    "subtitle": "Meet the dedicated leaders guiding our cooperative towards excellence and community service.",
+    "leadershipMessage": {
+      "title": "A Message from Our Leadership",
+      "content": "At Pragathi Co-operative Society, we believe that true success is measured not in numbers alone, but in the lives we touch and the dreams we help fulfill. Our board is committed to upholding the highest standards of transparency, integrity, and service. Together, we work to ensure that every member of our community has access to fair, reliable, and compassionate financial support."
+    },
+    "directors": [
+      {
+        "name": "MR. JOSSY SEQUIERA",
+        "position": "President",
+        "mobile": "9343342012",
+        "image": "/bod/jossy-sequiera.jpg"
+      },
+      {
+        "name": "MR. ROBERT LANCY PAIS",
+        "position": "Vice President",
+        "mobile": "9845184284",
+        "image": "/bod/robert-pais.jpg"
+      },
+      {
+        "position": "Director",
+        "mobile": "9448300593",
+        "image": "/bod/romans-lobo.jpg",
+        "name": "MR. ROMANS BASIL LOBO"
+      },
+      {
+        "name": "MR. JOCKIEM STANY ALVARES",
+        "position": "Director",
+        "mobile": "9845044983",
+        "image": "/bod/jockiem-alvares.jpg"
+      },
+      {
+        "name": "MR. NAVEEN NELSON PINTO",
+        "position": "Director",
+        "mobile": "9740200777",
+        "image": "/bod/naveen-pinto.png"
+      },
+      {
+        "name": "MR. ROHAN JOHN DSILVA",
+        "position": "Director",
+        "mobile": "9900814746",
+        "image": "/bod/rohan-dsilva.png"
+      },
+      {
+        "name": "MR. BENET DSILVA",
+        "position": "Director",
+        "mobile": "9845170171",
+        "image": "/bod/benet-dsilva.jpg"
+      },
+      {
+        "name": "MR. NOEL JOSEPH DSOUZA",
+        "position": "Director",
+        "mobile": "9448857337",
+        "image": "/bod/noel-dsouza.jpg"
+      },
+      {
+        "name": "MRS. ALICE LOBO",
+        "position": "Director",
+        "mobile": "9343766086",
+        "image": "/bod/alice-lobo.jpg"
+      },
+      {
+        "name": "MRS. LILLY DSOUZA",
+        "position": "Director",
+        "mobile": "9880076962",
+        "image": "/bod/lilly-dsouza.jpg"
+      },
+      {
+        "name": "MR. DONY DCUNHA",
+        "position": "Director",
+        "mobile": "9343560592",
+        "image": "/bod/dony-dcunha.jpg"
+      },
+      {
+        "name": "MR. KIRAN CASTELINO",
+        "position": "Director",
+        "mobile": "9343665598",
+        "image": "/bod/kiran-castelino.jpg"
+      },
+      {
+        "name": "MR. FRANCIS PRAVEEN CRASTA",
+        "position": "CEO",
+        "mobile": "8197827858",
+        "image": "/bod/francis-crasta.jpg"
       }
     ]
   },

@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="en">
+  <html lang="en" translate="no" className="notranslate">
     <body className={montserrat.className}>
       <NextIntlClientProvider>{children}</NextIntlClientProvider>
     </body>

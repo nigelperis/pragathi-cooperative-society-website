@@ -4,19 +4,17 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
   const [desktopDropdowns, setDesktopDropdowns] = useState<string[]>([]);
+  const t = useTranslations("Navbar");
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 100);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -30,44 +28,38 @@ const Navbar = () => {
   };
 
   const handleDesktopDropdown = (name: string, action: "open" | "close") => {
-    setDesktopDropdowns((prev) => {
-      if (action === "open") {
-        return prev.includes(name) ? prev : [...prev, name];
-      } else {
-        return prev.filter((item) => item !== name);
-      }
-    });
+    setDesktopDropdowns((prev) =>
+      action === "open"
+        ? prev.includes(name)
+          ? prev
+          : [...prev, name]
+        : prev.filter((item) => item !== name)
+    );
   };
 
-  const closeAllDropdowns = () => {
-    setDesktopDropdowns([]);
-  };
+  const closeAllDropdowns = () => setDesktopDropdowns([]);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about", hasDropdown: true },
-    { name: "Services", path: "/services" }, // Removed hasDropdown: true
-    { name: "Branches", path: "/branches" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Careers", path: "/careers" },
-    { name: "Contact", path: "/contact" },
+    { name: t("links.home"), path: "/" },
+    { name: t("links.about"), path: "/about", hasDropdown: true },
+    { name: t("links.services"), path: "/services" },
+    { name: t("links.branches"), path: "/branches" },
+    { name: t("links.gallery"), path: "/gallery" },
+    { name: t("links.careers"), path: "/careers" },
+    { name: t("links.contact"), path: "/contact" },
   ];
 
   const aboutDropdown = [
-    { name: "History", path: "/history" },
-    { name: "Board of Directors", path: "/board-of-directors" },
+    { name: t("links.aboutDropdown.history"), path: "/history" },
+    {
+      name: t("links.aboutDropdown.boardOfDirectors"),
+      path: "/board-of-directors",
+    },
   ];
-
-  // Commented out services dropdown - no longer needed
-  // const servicesDropdown = [
-  //   { name: "Loans", path: "/loans" },
-  //   { name: "Deposits", path: "/deposits" },
-  //   { name: "Facilities", path: "/facilities" },
-  // ];
 
   return (
     <div className="relative">
-      {/* Main Header - Always visible at top */}
+      {/* Header Section */}
       <div className="bg-linear-to-r from-primary via-primary/90 to-primary text-primary-foreground">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex justify-center py-6">
@@ -86,17 +78,17 @@ const Navbar = () => {
               </div>
               <div className="text-center leading-relaxed">
                 <h1 className="text-lg md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide">
-                  PRAGATHI CO-OPERATIVE SOCIETY LTD.
+                  {t("header.name")}
                 </h1>
-                <h2 className="mt-1">L. NO. 400</h2>
-                <p>HO: Lobo Manor, Kalpane, Kulshekar, Mangalore - 575005</p>
+                <h2 className="mt-1">{t("header.license")}</h2>
+                <p>{t("header.address")}</p>
               </div>
             </Link>
           </div>
         </div>
       </div>
 
-      {/* Navigation Bar - Becomes sticky */}
+      {/* Navigation */}
       <nav
         className={`${
           isScrolled
@@ -106,28 +98,26 @@ const Navbar = () => {
       >
         <div className="container mx-auto max-w-7xl px-4">
           <div className="flex items-center h-16 relative">
-            {/* Desktop Logo - Only show when scrolled */}
+            {/* Scrolled Mini Header */}
             {isScrolled && (
               <div className="hidden lg:flex items-center absolute left-0 z-10">
                 <Link href="/" className="flex items-center group">
-                  <div className="relative mr-3">
-                    <Image
-                      src="/pragathi-logo.png"
-                      alt="Pragathi Co-operative Society Emblem"
-                      width={40}
-                      height={40}
-                      className="h-10 w-10 rounded-full object-cover"
-                      priority
-                    />
-                  </div>
+                  <Image
+                    src="/pragathi-logo.png"
+                    alt="Pragathi Logo"
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 rounded-full object-cover mr-2"
+                    priority
+                  />
                   <h2 className="text-accent-foreground font-bold text-sm tracking-wide">
-                    PRAGATHI CO-OPERATIVE SOCIETY LTD.
+                    {t("header.name")}
                   </h2>
                 </Link>
               </div>
             )}
 
-            {/* Desktop Navigation - Shifts right when logo is visible */}
+            {/* Desktop Navigation */}
             <div
               className={`hidden lg:flex items-center w-full transition-all duration-300 ${
                 isScrolled ? "justify-end pr-4" : "justify-center"
@@ -158,88 +148,49 @@ const Navbar = () => {
                       </Link>
                     )}
 
-                    {/* Enhanced Dropdown Menus */}
-                    {link.name === "About" && (
+                    {/* About Dropdown */}
+                    {link.name === t("links.about") && (
                       <div
                         className={`absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-300 z-50 ${
-                          desktopDropdowns.includes("About")
+                          desktopDropdowns.includes(link.name)
                             ? "opacity-100 visible"
                             : "opacity-0 invisible"
                         }`}
-                        onMouseEnter={() =>
-                          handleDesktopDropdown("About", "open")
-                        }
-                        onMouseLeave={() =>
-                          handleDesktopDropdown("About", "close")
-                        }
                       >
-                        <div>
-                          {aboutDropdown.map((item) => (
-                            <Link
-                              key={item.path}
-                              href={item.path}
-                              onClick={closeAllDropdowns}
-                              className="block px-6 py-3 text-gray-700 hover:bg-primary/5 hover:text-primary transition-colors border-b border-gray-100 last:border-b-0 font-medium"
-                            >
-                              <div className="flex items-center">
-                                {item.name}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
+                        {aboutDropdown.map((item) => (
+                          <Link
+                            key={item.path}
+                            href={item.path}
+                            onClick={closeAllDropdowns}
+                            className="block px-6 py-3 text-gray-700 hover:bg-primary/5 hover:text-primary transition-colors border-b border-gray-100 last:border-b-0 font-medium"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
                       </div>
                     )}
-
-                    {/* Commented out Services dropdown */}
-                    {/* {link.name === "Services" && (
-                      <div
-                        className={`absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-300 z-50 ${desktopDropdowns.includes("Services")
-                            ? "opacity-100 visible"
-                            : "opacity-0 invisible"
-                          }`}
-                        onMouseEnter={() => handleDesktopDropdown("Services", 'open')}
-                        onMouseLeave={() => handleDesktopDropdown("Services", 'close')}
-                      >
-                        <div>
-                          {servicesDropdown.map((item) => (
-                            <Link
-                              key={item.path}
-                              href={item.path}
-                              onClick={closeAllDropdowns}
-                              className="block px-6 py-3 text-gray-700 hover:bg-primary/5 hover:text-primary transition-colors border-b border-gray-100 last:border-b-0 font-medium"
-                            >
-                              <div className="flex items-center">
-                                {item.name}
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    )} */}
                   </div>
                 ))}
               </div>
             </div>
+
+            {/* Mobile Navigation */}
             <div className="lg:hidden flex items-center justify-between w-full absolute inset-0">
               {isScrolled && (
                 <Link href="/" className="flex items-center">
-                  <div className="relative mr-2">
-                    <Image
-                      src="/pragathi-logo.png"
-                      alt="Pragathi Co-operative Society Emblem"
-                      width={32}
-                      height={32}
-                      className="h-8 w-8 rounded-full object-cover transition-all duration-300"
-                      priority
-                    />
-                  </div>
+                  <Image
+                    src="/pragathi-logo.png"
+                    alt="Pragathi Logo"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 rounded-full object-cover mr-2"
+                    priority
+                  />
                   <h2 className="text-accent-foreground font-bold text-sm tracking-wide">
-                    PRAGATHI CO-OPERATIVE SOCIETY LTD.
+                    {t("header.name")}
                   </h2>
                 </Link>
               )}
-
-              {/* Hamburger Menu on Right */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="p-2 rounded-lg text-accent-foreground hover:bg-white/20 transition-colors cursor-pointer ml-auto"
@@ -255,13 +206,12 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Dropdown Menu */}
         {isOpen && (
           <div className="lg:hidden bg-white border-t-4 border-accent shadow-xl max-h-[calc(100vh-4rem)] overflow-y-auto">
             <div className="py-2">
               {navLinks.map((link) => (
                 <div key={link.path}>
-                  {/* Main Menu Item */}
                   {link.hasDropdown ? (
                     <button
                       onClick={() => toggleDropdown(link.name)}
@@ -284,27 +234,10 @@ const Navbar = () => {
                     </Link>
                   )}
 
-                  {/* Dropdown Items - Show when expanded */}
-                  {link.name === "About" && openDropdowns.includes("About") && (
-                    <div className="bg-gray-50 border-b border-gray-100">
-                      {aboutDropdown.map((item) => (
-                        <Link
-                          key={item.path}
-                          href={item.path}
-                          onClick={() => setIsOpen(false)}
-                          className="block px-8 py-3 text-gray-700 hover:bg-gray-100 transition-colors border-b border-gray-200 last:border-b-0"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Commented out Services mobile dropdown */}
-                  {/* {link.name === "Services" &&
-                    openDropdowns.includes("Services") && (
+                  {link.name === t("links.about") &&
+                    openDropdowns.includes(link.name) && (
                       <div className="bg-gray-50 border-b border-gray-100">
-                        {servicesDropdown.map((item) => (
+                        {aboutDropdown.map((item) => (
                           <Link
                             key={item.path}
                             href={item.path}
@@ -315,16 +248,13 @@ const Navbar = () => {
                           </Link>
                         ))}
                       </div>
-                    )} */}
+                    )}
                 </div>
               ))}
             </div>
           </div>
         )}
       </nav>
-
-      {/* Spacer to prevent content jump when navbar becomes fixed */}
-      {isScrolled && <div className=""></div>}
     </div>
   );
 };

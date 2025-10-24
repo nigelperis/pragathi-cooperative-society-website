@@ -10,7 +10,6 @@ import {
   Vault,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
 
@@ -20,60 +19,57 @@ function HomePage() {
   const services = [
     {
       icon: PiggyBank,
-      title: "Pragathi Share Certificates",
-      description:
-        "Invest smartly with us and enjoy dividends of up to 18%! Each share is valued at just ₹100, making it an accessible and rewarding opportunity. With safe investments and transparent terms, your trust and growth are always our priority.",
+      title: t("services.items.shareCertificates.title"),
+      description: t("services.items.shareCertificates.description"),
       link: "/facilities",
     },
     {
       icon: CreditCard,
-      title: "Loan Services",
-      description:
-        "Property, vehicle, and gold loans with transparent terms and competitive rates.",
+      title: t("services.items.loans.title"),
+      description: t("services.items.loans.description"),
       link: "/loans",
     },
     {
       icon: Vault,
-      title: "Special Schemes",
-      description:
-        "Pigmy deposits and recurring schemes designed for your convenience.",
+      title: t("services.items.schemes.title"),
+      description: t("services.items.schemes.description"),
       link: "/facilities",
     },
   ];
 
   const stats = [
-    { icon: Users, value: "5,000+", label: "Happy Members" },
-    { icon: Building2, value: "7", label: "Branches" },
-    { icon: Heart, value: "35", label: "Years of Service" },
-    { icon: TrendingUp, value: "100%", label: "Trust & Growth" },
+    { icon: Users, value: "5,000+", label: t("stats.happyMembers") },
+    { icon: Building2, value: "7", label: t("stats.branches") },
+    { icon: Heart, value: "35", label: t("stats.yearsOfService") },
+    { icon: TrendingUp, value: "100%", label: t("stats.trustGrowth") },
   ];
 
   return (
     <div className="min-h-screen">
+      {/* Hero Section */}
       <section className="relative flex h-[600px] items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/pragathi-hero.jpg')" }}
         >
-          {/* <div className="absolute inset-0 bg-linear-to-r from-primary/95 via-primary/85 to-primary/70" /> */}
           <div className="absolute inset-0 bg-linear-to-r from-primary/75 via-primary/70 to-primary/65" />
         </div>
 
         <div className="container relative z-10 mx-auto max-w-7xl px-4">
           <div className="max-w-2xl animate-fade-in text-primary-foreground">
             <h1 className="mb-6 text-4xl font-bold leading-tight md:text-7xl">
-              {t("title")}
+              {t("hero.title")}
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-primary-foreground/90">
-              {t("subtitle")}
+              {t("hero.subtitle")}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="bg-accent font-semibold text-accent-foreground shadow-lg transition-all hover:bg-accent/90 hover:shadow-xl cursor-pointer"
+                  className="bg-accent font-semibold text-accent-foreground shadow-lg hover:bg-accent/90 hover:shadow-xl cursor-pointer"
                 >
-                  Get Started
+                  {t("hero.getStarted")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -83,7 +79,7 @@ function HomePage() {
                   variant="outline"
                   className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground/20 cursor-pointer"
                 >
-                  Our Story
+                  {t("hero.ourStory")}
                 </Button>
               </Link>
             </div>
@@ -91,6 +87,7 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Stats Section */}
       <section className="bg-secondary/30 py-16">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
@@ -115,14 +112,15 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Services Section */}
       <section className="py-20">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-bold text-primary">
-              Our Facilities and Schemes
+              {t("services.title")}
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Comprehensive financial solutions designed with your needs in mind
+              {t("services.subtitle")}
             </p>
           </div>
 
@@ -148,7 +146,7 @@ function HomePage() {
                       variant="ghost"
                       className="group text-primary hover:bg-secondary/50 hover:text-accent cursor-pointer"
                     >
-                      Learn More
+                      {t("services.learnMore")}
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </Link>
@@ -159,19 +157,21 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Join Family Section */}
       <section className="bg-linear-to-br from-primary to-primary/90 py-20 text-primary-foreground">
         <div className="container mx-auto max-w-7xl px-4 text-center">
-          <h2 className="mb-6 text-4xl font-bold">Join Our Growing Family</h2>
+          <h2 className="mb-6 text-4xl font-bold">
+            {t("joinFamily.title")}
+          </h2>
           <p className="mx-auto mb-8 max-w-2xl text-xl text-primary-foreground/90">
-            Experience the warmth of community banking. Let us help you achieve
-            your financial goals.
+            {t("joinFamily.subtitle")}
           </p>
           <Link href="/contact">
             <Button
               size="lg"
               className="bg-accent font-semibold text-accent-foreground shadow-lg hover:bg-accent/90 cursor-pointer"
             >
-              Contact Us Today
+              {t("joinFamily.contactUs")}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

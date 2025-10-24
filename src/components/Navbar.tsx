@@ -88,11 +88,11 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="text-center leading-relaxed">
-                <h1 className="text-lg md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide">
+                <h1 className="text-base sm:text-lg md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide break-words">
                   {t("header.name")}
                 </h1>
-                <h2 className="mt-1">{t("header.license")}</h2>
-                <p>{t("header.address")}</p>
+                <h2 className="mt-1 text-sm sm:text-base">{t("header.license")}</h2>
+                <p className="text-sm sm:text-base">{t("header.address")}</p>
               </div>
             </Link>
           </div>
@@ -121,8 +121,9 @@ const Navbar = () => {
                     priority
                   />
                   <div className="text-accent-foreground font-bold text-xs leading-tight tracking-wide">
-                    <div>PRAGATHI</div>
-                    <div>CO-OPERATIVE SOCIETY LTD.</div>
+                    <div>{t("scrollLogo.line1")}</div>
+                    <div>{t("scrollLogo.line2")}</div>
+                    <div>{t("scrollLogo.line3")}</div>
                   </div>
                 </Link>
               </div>
@@ -151,8 +152,8 @@ const Navbar = () => {
                         {link.name === t("links.about") && (
                           <div
                             className={`absolute top-full left-0 w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-200 z-50 ${activeDropdown === link.name
-                                ? "opacity-100 visible translate-y-0"
-                                : "opacity-0 invisible -translate-y-2"
+                              ? "opacity-100 visible translate-y-0"
+                              : "opacity-0 invisible -translate-y-2"
                               }`}
                           >
                             {aboutDropdown.map((item) => (
@@ -188,7 +189,7 @@ const Navbar = () => {
             {/* Mobile Navigation */}
             <div className="lg:hidden flex items-center justify-between w-full absolute inset-0">
               {isScrolled && (
-                <Link href="/" className="flex items-center max-w-40">
+                <Link href="/" className="flex items-center max-w-65">
                   <Image
                     src="/pragathi-logo.png"
                     alt="Pragathi Logo"
@@ -198,8 +199,7 @@ const Navbar = () => {
                     priority
                   />
                   <div className="text-accent-foreground font-bold text-xs leading-tight tracking-wide">
-                    <div>PRAGATHI</div>
-                    <div>CO-OPERATIVE SOCIETY LTD.</div>
+                    <div>{t("header.name")}</div>
                   </div>
                 </Link>
               )}

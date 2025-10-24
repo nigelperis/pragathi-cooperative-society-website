@@ -5,6 +5,11 @@
       "license": "ಎಲ್. ನಂ. ೪೦೦",
       "address": "ಪ್ರಧಾನ ಕಛೇರಿ: ಲೋಬೋ ಮ್ಯಾನರ್, ಕಲ್ಪನೆ, ಕುಲಶೇಖರ, ಮಂಗಳೂರು - 575005"
     },
+    "scrollLogo": {
+      "line1": "ಪ್ರಗತಿ",
+      "line2": "ಸಹಕಾರ ಸಂಘ",
+      "line3": "ನಿಯಮಿತ"
+    },
     "languageSwitcher": {
       "label": "ಭಾಷೆ",
       "english": "English",
@@ -155,7 +160,7 @@
         "image": "/bod/benet-dsilva.jpg"
       },
       {
-        "name": "ಶ್ರೀ ನೊಯೆಲ್ ಜೊಸೆಫ್ ಲಿಲ್ಲಿ ಡಿಸೋಜಾ",
+        "name": "ಶ್ರೀ ನೊಯೆಲ್ ಜೊಸೆಫ್ ಡಿಸೋಜಾ",
         "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9448857337",
         "image": "/bod/noel-dsouza.jpg"
@@ -180,7 +185,7 @@
       },
       {
         "name": "ಶ್ರೀ ಕಿರಣ್ ಕ್ಯಾಸ್ತೆಲಿನೋ",
-        "position": "Director",
+        "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9343665598",
         "image": "/bod/kiran-castelino.jpg"
       },

@@ -19,9 +19,9 @@ const ContactPage = () => {
 
   const handleChange =
     (field: "name" | "email" | "phone" | "message") =>
-    (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setFormData((prev) => ({ ...prev, [field]: event.target.value }));
-    };
+      (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData((prev) => ({ ...prev, [field]: event.target.value }));
+      };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -58,22 +58,22 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto max-w-7xl px-4">
-        <div className="mb-16 text-center animate-fade-in">
-          <h1 className="mb-4 text-5xl font-bold text-primary">Get in Touch</h1>
-          <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
+    <div className="min-h-screen py-12 sm:py-20">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 sm:mb-16 text-center animate-fade-in">
+          <h1 className="mb-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-primary">Get in Touch</h1>
+          <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground px-4">
             We are here to help. Reach out to us for any inquiries or support.
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-6xl gap-6 sm:gap-8 lg:gap-12 lg:grid-cols-2">
           <Card className="animate-fade-in shadow-lg">
-            <CardContent className="p-8">
-              <h2 className="mb-6 text-2xl font-bold text-primary">
+            <CardContent className="p-4 sm:p-6 lg:p-8">
+              <h2 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-primary">
                 Send Us a Message
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div>
                   <label
                     htmlFor="name"
@@ -158,17 +158,17 @@ const ContactPage = () => {
             style={{ animationDelay: "100ms" }}
           >
             <Card className="shadow-lg bg-linear-to-br from-primary to-primary/90 text-primary-foreground">
-              <CardContent className="p-8">
-                <h2 className="mb-6 text-2xl font-bold">Contact Information</h2>
-                <div className="space-y-6">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <h2 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-bold">Contact Information</h2>
+                <div className="space-y-4 sm:space-y-6">
                   {contactInfo.map((info) => (
-                    <div key={info.title} className="flex items-start gap-4">
-                      <div className="flex h-15 w-15 shrink-0 items-center justify-center rounded-lg bg-primary-foreground/10">
-                        <info.icon className="h-7 w-7 text-primary-foreground" />
+                    <div key={info.title} className="flex items-start gap-3 sm:gap-4">
+                      <div className="flex h-12 w-12 sm:h-15 sm:w-15 shrink-0 items-center justify-center rounded-lg bg-primary-foreground/10">
+                        <info.icon className="h-5 w-5 sm:h-7 sm:w-7 text-primary-foreground" />
                       </div>
-                      <div>
-                        <h3 className="mb-1 font-semibold">{info.title}</h3>
-                        <p className="text-primary-foreground/80">
+                      <div className="min-w-0 flex-1">
+                        <h3 className="mb-1 text-sm sm:text-base font-semibold">{info.title}</h3>
+                        <p className="text-xs sm:text-sm text-primary-foreground/80 break-words">
                           {info.title === "Phone" ? (
                             <>
                               {info.content.split(",").map((num, idx) => (
@@ -204,11 +204,10 @@ const ContactPage = () => {
             </Card>
 
             <Card className="overflow-hidden shadow-lg">
-              <div className="h-64 w-full">
+              <div className="relative h-48 sm:h-64 w-full">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3889.363832760679!2d74.8754234750749!3d12.884310687423136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDUzJzAzLjUiTiA3NMKwNTInNDAuOCJF!5e0!3m2!1sen!2sin!4v1761201916439!5m2!1sen!2sin"
-                  width="600"
-                  height="450"
+                  className="absolute inset-0 h-full w-full"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
@@ -219,9 +218,9 @@ const ContactPage = () => {
             </Card>
 
             <Card className="border-accent/30 bg-accent/10">
-              <CardContent className="p-6">
-                <h3 className="mb-3 font-semibold text-primary">Visit Us</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+              <CardContent className="p-4 sm:p-6">
+                <h3 className="mb-3 text-sm sm:text-base font-semibold text-primary">Visit Us</h3>
+                <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground">
                   Walk into any of our seven branches across Mangalore. Our
                   friendly staff is ready to assist you with all your banking
                   needs. No appointment necessary.

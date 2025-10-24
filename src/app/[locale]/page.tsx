@@ -50,7 +50,7 @@ export default async function HomePage() {
       <section className="relative flex h-[600px] items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/pragathi-hero.jpg')" }}
+          style={{ backgroundImage: "url('/pragathi-hero.webp')" }}
         >
           <div className="absolute inset-0 bg-linear-to-r from-primary/75 via-primary/70 to-primary/65" />
         </div>

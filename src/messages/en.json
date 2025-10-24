@@ -116,25 +116,25 @@
         "name": "MR. JOSSY SEQUIERA",
         "position": "President",
         "mobile": "9343342012",
-        "image": "/bod/jossy-sequiera.jpg"
+        "image": "/bod/jossy-sequiera.webp"
       },
       {
         "name": "MR. ROBERT LANCY PAIS",
         "position": "Vice President",
         "mobile": "9845184284",
-        "image": "/bod/robert-pais.jpg"
+        "image": "/bod/robert-pais.webp"
       },
       {
         "position": "Director",
         "mobile": "9448300593",
-        "image": "/bod/romans-lobo.jpg",
+        "image": "/bod/romans-lobo.webp",
         "name": "MR. ROMANS BASIL LOBO"
       },
       {
         "name": "MR. JOCKIEM STANY ALVARES",
         "position": "Director",
         "mobile": "9845044983",
-        "image": "/bod/jockiem-alvares.jpg"
+        "image": "/bod/jockiem-alvares.webp"
       },
       {
         "name": "MR. NAVEEN NELSON PINTO",
@@ -152,43 +152,43 @@
         "name": "MR. BENET DSILVA",
         "position": "Director",
         "mobile": "9845170171",
-        "image": "/bod/benet-dsilva.jpg"
+        "image": "/bod/benet-dsilva.webp"
       },
       {
         "name": "MR. NOEL JOSEPH DSOUZA",
         "position": "Director",
         "mobile": "9448857337",
-        "image": "/bod/noel-dsouza.jpg"
+        "image": "/bod/noel-dsouza.webp"
       },
       {
         "name": "MRS. ALICE LOBO",
         "position": "Director",
         "mobile": "9343766086",
-        "image": "/bod/alice-lobo.jpg"
+        "image": "/bod/alice-lobo.webp"
       },
       {
         "name": "MRS. LILLY DSOUZA",
         "position": "Director",
         "mobile": "9880076962",
-        "image": "/bod/lilly-dsouza.jpg"
+        "image": "/bod/lilly-dsouza.webp"
       },
       {
         "name": "MR. DONY DCUNHA",
         "position": "Director",
         "mobile": "9343560592",
-        "image": "/bod/dony-dcunha.jpg"
+        "image": "/bod/dony-dcunha.webp"
       },
       {
         "name": "MR. KIRAN CASTELINO",
         "position": "Director",
         "mobile": "9343665598",
-        "image": "/bod/kiran-castelino.jpg"
+        "image": "/bod/kiran-castelino.webp"
       },
       {
         "name": "MR. FRANCIS PRAVEEN CRASTA",
         "position": "CEO",
         "mobile": "8197827858",
-        "image": "/bod/francis-crasta.jpg"
+        "image": "/bod/francis-crasta.webp"
       }
     ]
   },

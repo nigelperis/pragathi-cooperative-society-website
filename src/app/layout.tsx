@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: `${BASE_URL}/pragathi-hero.jpg`,
+        url: `${BASE_URL}/pragathi-hero.webp`,
         width: 1200,
         height: 630,
         alt: "Pragathi Co-operative Society Ltd.",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pragathi Co-operative Society Ltd.",
     description: "Your trusted co-operative partner.",
-    images: [`${BASE_URL}/pragathi-hero.jpg`],
+    images: [`${BASE_URL}/pragathi-hero.webp`],
   },
   keywords: [
     "Pragathi Co-operative Society Ltd.",
@@ -51,17 +51,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
-  
   return (
-    <html lang={locale}>
+    <html lang={params.locale}>
       <body>
         {children}
         <GoogleAnalyticsScript />

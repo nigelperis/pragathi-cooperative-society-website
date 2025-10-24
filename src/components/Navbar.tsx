@@ -80,21 +80,27 @@ const Navbar = () => {
                   <Image
                     src="/pragathi-logo.png"
                     alt="Pragathi Co-operative Society Emblem"
-                    width={72}
-                    height={72}
+                    width={200}
+                    height={200}
                     className="h-30 w-30 rounded-full object-cover"
                     priority
                   />
                 </div>
               </div>
               <div className="text-center leading-relaxed">
-                <h1 className="text-base sm:text-lg md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide wrap-break-word">
+                <h1 className="text-base sm:text-2xl md:text-3xl font-bold text-primary-foreground leading-tight tracking-wide break-words">
                   {t("header.name")}
                 </h1>
-                <h2 className="mt-1 text-sm sm:text-base">
-                  {t("header.license")}
-                </h2>
-                <p className="text-sm sm:text-base">{t("header.address")}</p>
+                <div className="flex flex-col lg:items-center text-primary-foreground/90">
+                  <div className="flex items-center justify-center lg:justify-start gap-2">
+                    <h2 className="text-sm lg:text-base font-medium">
+                      {t("header.license")}
+                    </h2>
+                  </div>
+                  <p className="text-sm lg:text-base text-primary-foreground/80 leading-relaxed">
+                    {t("header.address")}
+                  </p>
+                </div>
               </div>
             </Link>
           </div>
@@ -118,9 +124,9 @@ const Navbar = () => {
                   <Image
                     src="/pragathi-logo.png"
                     alt="Pragathi Logo"
-                    width={40}
-                    height={40}
-                    className="h-10 w-10 rounded-full object-cover mr-2 shrink-0"
+                    width={100}
+                    height={100}
+                    className="h-14 w-14 rounded-full object-cover mr-2 flex-shrink-0"
                     priority
                   />
                 </Link>
@@ -197,9 +203,9 @@ const Navbar = () => {
                   <Image
                     src="/pragathi-logo.png"
                     alt="Pragathi Logo"
-                    width={32}
-                    height={32}
-                    className="h-9 w-9 rounded-full object-cover mr-2 shrink-0"
+                    width={100}
+                    height={100}
+                    className="h-14 w-14 rounded-full object-cover mr-2 flex-shrink-0"
                     priority
                   />
                 </Link>

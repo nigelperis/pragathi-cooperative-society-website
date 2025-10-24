@@ -113,79 +113,79 @@
     },
     "directors": [
       {
-        "name": "ಶ್ರೀ. ಜೊಸ್ಸಿ ಸಿಕ್ವೇರಾ",
+        "name": "ಶ್ರೀ ಜೊಸ್ಸಿ ಸಿಕ್ವೇರಾ",
         "position": "ಅಧ್ಯಕ್ಷ",
         "mobile": "9343342012",
         "image": "/bod/jossy-sequiera.jpg"
       },
       {
-        "name": "MR. ROBERT LANCY PAIS",
-        "position": "Vice President",
+        "name": "ಶ್ರೀ ರೊಬರ್ಟ್ ಲ್ಯಾನ್ಸಿ ಪಾಯಸ್",
+        "position": "ಅಧ್ಯಕ್ಷ",
         "mobile": "9845184284",
         "image": "/bod/robert-pais.jpg"
       },
       {
-        "position": "Director",
+        "name": "ಶ್ರೀ ರೊಮನ್ಸ್ ಬೇಸಿಲ್ ಲೋಬೊ",
+        "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9448300593",
-        "image": "/bod/romans-lobo.jpg",
-        "name": "MR. ROMANS BASIL LOBO"
+        "image": "/bod/romans-lobo.jpg"
       },
       {
-        "name": "MR. JOCKIEM STANY ALVARES",
-        "position": "Director",
+        "name": "ಶ್ರೀ ಜೊಕಿಮ್ ಸ್ಟೇನಿ ಅಲ್ವಾರಿಸ್",
+        "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9845044983",
         "image": "/bod/jockiem-alvares.jpg"
       },
       {
-        "name": "MR. NAVEEN NELSON PINTO",
-        "position": "Director",
+        "name": "ಶ್ರೀ ನವೀನ್ ನೆಲ್ಸನ್ ಪಿಂಟೊ",
+        "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9740200777",
         "image": "/bod/naveen-pinto.png"
       },
       {
-        "name": "MR. ROHAN JOHN DSILVA",
-        "position": "Director",
+        "name": "ಶ್ರೀ ರೊಹನ್ ಜೊನ್ ಡಿಸಿಲ್ವಾ",
+        "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9900814746",
         "image": "/bod/rohan-dsilva.png"
       },
       {
-        "name": "MR. BENET DSILVA",
-        "position": "Director",
+        "name": "ಶ್ರೀ ಬೆನೆಟ್ ಡಿಸಿಲ್ವಾ",
+        "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9845170171",
         "image": "/bod/benet-dsilva.jpg"
       },
       {
-        "name": "MR. NOEL JOSEPH DSOUZA",
-        "position": "Director",
+        "name": "ಶ್ರೀ ನೊಯೆಲ್ ಜೊಸೆಫ್ ಲಿಲ್ಲಿ ಡಿಸೋಜಾ",
+        "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9448857337",
         "image": "/bod/noel-dsouza.jpg"
       },
       {
-        "name": "MRS. ALICE LOBO",
-        "position": "Director",
+        "name": "ಶ್ರೀಮತಿ ಆಲಿಸ್ ಲೋಬೊ",
+        "position": "ನಿರ್ದೇಶಕಿ",
         "mobile": "9343766086",
         "image": "/bod/alice-lobo.jpg"
       },
       {
-        "name": "MRS. LILLY DSOUZA",
-        "position": "Director",
+        "name": "ಶ್ರೀಮತಿ ಲಿಲ್ಲಿ ಡಿಸೋಜಾ",
+        "position": "ನಿರ್ದೇಶಕಿ",
         "mobile": "9880076962",
         "image": "/bod/lilly-dsouza.jpg"
       },
       {
-        "name": "ಶ್ರೀ. ಡೋನಿ ಡಿಕುನ್ಹಾ",
+        "name": "ಶ್ರೀ ಡೊನಿ ಡಿಕುನ್ಹಾ",
         "position": "ನಿರ್ದೇಶಕ",
         "mobile": "9343560592",
         "image": "/bod/dony-dcunha.jpg"
       },
       {
-        "name": "MR. KIRAN CASTELINO",
+        "name": "ಶ್ರೀ ಕಿರಣ್ ಕ್ಯಾಸ್ತೆಲಿನೋ",
         "position": "Director",
         "mobile": "9343665598",
         "image": "/bod/kiran-castelino.jpg"
       },
       {
-        "name": "MR. FRANCIS PRAVEEN CRASTA",
+        "name": "ಶ್ರೀ ಫ್ರಾನ್ಸಿಸ್ ಪ್ರವೀಣ್ ಕ್ರಾಸ್ತಾ",
         "position": "CEO",
         "mobile": "8197827858",
         "image": "/bod/francis-crasta.jpg"
